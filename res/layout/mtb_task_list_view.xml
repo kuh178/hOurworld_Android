@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/inner_content" >
+	
+    <ProgressBar
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_centerInParent="true"
+		android:id="@+id/spinner"
+	/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_below="@+id/spinner"
+		android:id="@+id/loading_text"
+		android:text="Loading services..."
+	/>
+	
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:background="@color/title_bar_color"
+        android:id="@+id/header"
+        android:visibility="gone">
+
+        <Button style="@android:style/Widget.Button.Small"
+            android:id="@+id/menu_btn"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text=">>" />
+       	
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menu_btn"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="Menu"
+            android:id="@+id/menu_text"/>
+        
+    
+        <Button style="@android:style/Widget.Button.Small"
+            android:id="@+id/map_btn"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="Map"
+            android:visibility="gone"
+            android:enabled="false" />
+        
+        <Button
+			android:id="@+id/fliter"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="Check all" />
+        
+        <Button style="@android:style/Widget.Button.Small"
+            android:id="@+id/category_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:text="Category"/>
+        
+    </RelativeLayout>
+	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listview"
+	    android:layout_below="@+id/header"
+	    android:layout_above="@+id/line"
+	    />
+	<!-- 
+    
+    <com.viewpagerindicator.TitlePageIndicator
+		android:id="@+id/indicator"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:background="@android:color/black"
+	    style="@style/Widget.MyTitlepageIndicator" />
+    	
+	<android.support.v4.view.ViewPager
+		android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/indicator"
+        android:layout_above="@+id/line"
+        android:layout_weight="1"
+        android:visibility="gone" />
+     -->
+         
+	<View
+		android:id="@+id/line"
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+        android:layout_above="@+id/footer"
+		android:background="@drawable/blue_bar"
+		android:visibility="gone" />
+
+	<RelativeLayout
+		android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+	    <!-- 
+		<Button
+			android:id="@+id/settings"
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/settings_icon" />
+		 -->
+		 
+		<Button
+			android:id="@+id/refresh"
+			android:layout_width="28dp"
+			android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/refresh" />
+
+		<Button
+            android:id="@+id/refresh_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/refresh_icon_handler"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/footer_text"
+            android:text="Press &apos;+&apos; to add Message or Task" />
+
+        <Button
+            android:id="@+id/add_request"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/plus" />
+    </RelativeLayout>
+</RelativeLayout>

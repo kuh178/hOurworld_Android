@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="5dp">
+	
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textColor="@color/white"
+            android:text="Our new applicant has requested that you provide a reference in support of his/her application to become a member of Community Time Exchange. 
+            \nWe are a non-profit organization and Hour Exchange that builds community. Every exchange is based on time. 
+            \nMembers earn and spend hours, with every hour equal regardless of the service. We respect and value everyone, no matter what your given skill set or present circumstance may be. 
+            
+            \n\nOur new applicant has completed our online application and needs your reference to become a member. 
+            \nBecause there is so much trust involved in exchanging between neighbors, we do reference checks on all potential members. 
+            \nPlease complete the form below at your earliest convenience. 
+            \nWe invite you to find out more about our organization and explore the benefits of joining, just as Our new applicant has! 
+            \n\nFind out more at http://www.familyinvolvementcenter.org! 
+		
+			\n\nCommunity Time Exchange Reference Form 
+			\nApplicant's name: Our new applicant 
+			\nReference provided by: 
+			\nHow long have you known the applicant? 
+			\nIn what capacity? 
+			\nTo your knowledge, does the applicant use good judgment? 
+			\nHow responsible is the applicant? 
+			\nWhat special skills, gifts and talents does the applicant possess? 
+			\nDoes she or he relate well to people of all ages? 
+			\nDo you have any reservations about recommending this person to become a member of Community Time Exchange? 
+			\nAnything that you would like to add? 
+			\nBest times to call you: 
+			\nReturn To: 
+	
+			\n\nThank you for your time!"
+            
+            />
+        
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.psu.ist.mtb_hourworld"
+    android:versionCode="25"
+    android:versionName="1.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<!--  If you are using both NETWORK_PROVIDER and GPS_PROVIDER, 
+	then you need to request only the ACCESS_FINE_LOCATION permission, 
+	because it includes permission for both providers. 
+	(Permission for ACCESS_COARSE_LOCATION includes permission only for NETWORK_PROVIDER.) -->
+	<!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<!-- <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES"  /> -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    
+    <!-- <permission android:name="edu.psu.ist.mtb_hourworld.permission.C2D_MESSAGE" android:protectionLevel="signature"/> -->
+    <!-- <uses-permission android:name="edu.psu.ist.mtb_hourworld.permission.C2D_MESSAGE"/> -->
+    
+    <!-- App receives GCM messages -->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/> -->
+    <!-- GCM requires a Google account -->
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS"/> -->
+    <!-- Keeps the processor from sleeping when a message is received -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <!-- end GCM permissions -->
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hourworld_logo_new_500"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <uses-library android:name="com.google.android.maps" />
+        
+        <activity
+            android:name="edu.psu.ist.mtb_hourworld.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+       
+        <!-- main -->
+        <activity android:name="MTBNewsPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        <activity android:name="MTBRequestPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:name="MTBOfferPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name="MTBReportHoursPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name="MTBMessagePage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name="MTBMessageMapPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name="MTBOfferRequestMapPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name="MTBAboutPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name="MTBHoursPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		<!-- hour -->
+		<activity android:name=".hours.MTBHoursPickMember" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".hours.MTBHoursPickCatService" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".hours.MTBHoursPickCatService2" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+        <!-- account -->
+        <activity android:name=".account.MTBLoginPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:name=".account.MTBRegisterPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity android:name=".account.MTBRegisterPage2" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+        
+		<!-- profile -->
+		<activity android:name=".profile.MTBProfilePage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".profile.MTBEditProfilePage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".profile.MTBProfileEditContactPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".profile.MTBProfileEditAddressPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".profile.MTBProfileEditBioPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".profile.MTBStatementPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		<!-- task -->
+		<activity android:name=".tasks.MTBCreateNewTaskPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name=".tasks.MTBTaskDetailPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBEditTaskPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBAddMessagePage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBAddRequestOfferPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBAddRequestOfferPage2" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBAddRequestOfferPage3" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBMessageDetailPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		<!-- location -->
+		<activity android:name=".location.MTBAddTaskLocationPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		
+		<!-- message -->
+		<activity android:name=".message.MTBMessageMainPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        
+		
+		<!-- settings -->
+		<activity android:name=".settings.MTBSettings" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".settings.MTBHistoryPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name=".settings.MTBCreditPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		
+		
+		<!-- report hours -->
+		<activity android:name=".tasks.MTBReportHoursPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		<!-- search -->
+		<activity android:name=".search.MTBSearchMainPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".search.MTBSearchDetailPage" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		<activity android:name=".search.MTBSearchProvider" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".search.MTBSearchBio" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".search.MTBSearchName" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".search.MTBSearchMessage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".search.MTBSearchKB" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		<!-- group -->
+		<activity android:name=".group.MTBGroupMainPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".group.MTBGroupJoinPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".group.MTBGroupDetailPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".group.MTBGroupMessagePage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+        <!-- GPS handler service -->
+        <service android:name=".location.GPSHandler" android:exported="false">
+			<intent-filter>
+				<action android:name="edu.psu.ist.mtb_hourworld.location.GPSHandler.SERVICE"/>
+			</intent-filter>
+		</service>
+				
+        <!-- GCM service -->
+        <!-- 
+	    <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+		  <intent-filter>
+		    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		    <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		    <category android:name="edu.psu.ist.mtb_hourworld"/>
+		  </intent-filter>
+		</receiver>
+		-->
+
+		<service android:name=".utilities.MTBGCMIntentService"></service>
+		<activity android:name="MTBMainMenuPage" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".location.MTBAddTaskLocationSimplifiedPage"  android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+		
+		<!-- search -->
+		<meta-data android:name="android.app.searchable" android:value=".hours.MTBHoursPickMember" android:resource="@xml/searchable" />
+		
+		<!-- debug 
+		 
+		<meta-data
+    		android:name="com.google.android.maps.v2.API_KEY"
+    		android:value="AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw"/>
+    	-->
+		<!-- release -->
+		<meta-data
+    		android:name="com.google.android.maps.v2.API_KEY"
+    		android:value="AIzaSyCA7yrF-hYQXzr2HIzrKjfgYUcjl2RXmEA"/>
+		
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<activity android:name=".tasks.MTBTaskCategory" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBTaskCategoryService" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		<activity android:name=".tasks.MTBTaskCategoryServiceTask" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
+		
+		
+    </application>
+</manifest>

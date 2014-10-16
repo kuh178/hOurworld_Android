@@ -1,0 +1,12 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+    
+    <dimen name="body_padding_large">25dp</dimen>
+    <dimen name="text_size_xlarge">32dp</dimen>
+    <dimen name="speaker_image_size">64dp</dimen>
+
+</resources>

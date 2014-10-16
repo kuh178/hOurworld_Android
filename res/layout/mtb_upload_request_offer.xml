@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text=" Finalize your Offer or Request [3/3]"
+			android:layout_gravity="center"
+			android:id="@+id/header_title"
+		/>
+	</RelativeLayout>
+	<!-- end Header --> 
+    <ScrollView
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_margin="5dp"
+		android:layout_below="@+id/title_bar"
+		android:layout_above="@+id/bottom">
+	<LinearLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical">
+    	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:textStyle="bold"
+	  		android:textSize="15sp"
+	        android:text="Category and service"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@drawable/blue_bar" />
+	    <TextView
+	        android:id="@+id/category"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="2dp"
+	        android:textStyle="bold"
+	  		android:textSize="15sp"
+	        android:text="Category"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true" />
+	    
+	    
+	    <!--  title -->
+		<TextView
+	        android:id="@+id/task_description_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:textStyle="bold"
+	  		android:textSize="15sp"
+	        android:text="Description"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true" />
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@drawable/blue_bar" />
+		<EditText
+	        android:id="@+id/message_edittext"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginTop="2dp"
+		  	android:hint="Please add a through description for your task"
+		  	android:minLines="3" />
+
+	    <!-- expiration -->
+	    <TextView
+	        android:id="@+id/task_expiration_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:textStyle="bold"
+	  		android:textSize="15sp"
+	        android:text="Expiration"
+	        android:visibility="gone"/>
+	    <View
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@drawable/blue_bar"
+			android:visibility="gone" />
+	    <Spinner
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="2dp"
+			android:id="@+id/spinner"
+			android:entries="@array/request_offer_expiration_arrays"
+			android:prompt="@string/request_offer_expiration_prompt"
+			android:layout_gravity="center"
+			android:visibility="gone"
+		/>
+		
+		<!-- choose lvl of displaying your location -->
+		<TextView
+	        android:id="@+id/textView7"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:textStyle="bold"
+	  		android:textSize="16sp"
+	        android:text="Location (optional)" />
+	   	<View
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@drawable/blue_bar" />
+		<Button
+	        android:id="@+id/location_btn"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="2dp"
+	        android:text="Click to add location info"
+	        android:textSize="14sp" />
+		
+		<fragment
+          	android:id="@+id/map"
+          	android:layout_width="match_parent"
+          	android:layout_height="200dp"
+          	android:name="com.google.android.gms.maps.SupportMapFragment"/>	
+
+	</LinearLayout>
+	</ScrollView>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:id="@+id/bottom"
+	    android:orientation="vertical"
+	    android:visibility="gone">
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="2dp"
+			android:background="@drawable/blue_bar"
+		/>
+		<Button
+			android:id="@+id/submit_btn"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="5dp"
+		    android:text="Save all changes and Publish" />
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fcfdfd"
+    tools:context=".MTBMainMenuPage" >
+
+     <!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:id="@+id/my_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text="@string/hourworld"
+			android:layout_gravity="center"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+    
+		 <ImageView  
+	        android:id="@+id/hourworld_logo"
+			android:src="@drawable/hourworld3"
+			android:layout_below="@+id/title_bar"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:adjustViewBounds="true"
+			android:layout_margin="5dp"/>
+		
+		<Button
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_margin="10dp"
+		    android:layout_marginTop="20dp"
+		    android:layout_below="@+id/hourworld_logo"
+		    android:id="@+id/promotion_btn"
+		    android:text="@string/promo_text"
+		    android:textSize="18sp"
+		    android:textStyle="bold"
+		    android:textColor="@color/twitter_color"
+		    android:background="@android:color/transparent"
+		    />
+		 
+		<RelativeLayout
+		    android:id="@+id/two_button"
+		    android:layout_below="@+id/hourworld_logo"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_above="@+id/footer"
+		    android:layout_centerInParent="true"
+		    android:layout_marginTop="10dp">
+		   	
+		    <!-- first row -->
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		   		android:orientation="horizontal"
+				android:weightSum="1"
+				android:layout_above="@+id/second_row"
+				android:baselineAligned="false"
+		        >
+		        <!-- Announcements -->
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.5"
+				    android:layout_marginLeft="15dp"
+				    >
+
+				    <Button
+				        android:id="@+id/announcement_btn"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_centerInParent="true"
+				        android:background="@drawable/news"
+				        android:scaleType="fitXY" />
+
+				    <TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_below="@+id/announcement_btn"
+					    android:layout_centerHorizontal="true"
+					    android:layout_marginTop="14dp"
+					    android:textColor="#292765"
+				        android:text="@string/announcements"
+				        android:textSize="@dimen/body_padding_large"
+				        android:textStyle="bold" />
+				</RelativeLayout>
+		        
+		    	<!-- Offers -->
+				<RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.5"
+				    android:layout_marginRight="15dp"
+				    >
+					<Button
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:layout_centerInParent="true"
+						android:textColor="@android:color/black"
+						android:background="@drawable/offers"
+						android:id="@+id/offers_btn"
+					/>
+
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_below="@+id/offers_btn"
+					    android:layout_centerHorizontal="true"
+					    android:layout_marginTop="14dp"
+					    android:text="@string/offers"
+					    android:textColor="#292765"
+					    android:textSize="@dimen/body_padding_large"
+					    android:textStyle="bold" />
+				</RelativeLayout>
+			</LinearLayout>
+		    <!-- end of the first row -->
+		    
+		    <!-- start of the second row -->
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		   		android:orientation="horizontal"
+				android:layout_centerInParent="true"
+				android:weightSum="1"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="15dp"
+				android:id="@+id/second_row"
+				android:baselineAligned="false"
+		        >
+			
+		       <!-- Request -->
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.5"
+					android:layout_marginLeft="15dp">
+					<Button
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:layout_centerInParent="true"
+						android:textColor="@android:color/black"
+						android:background="@drawable/requests"
+						android:id="@+id/request_btn"/>
+	
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_below="@+id/request_btn"
+						android:layout_centerHorizontal="true"
+						android:layout_marginTop="14dp"
+					    android:text="@string/requests"
+					    android:textColor="#292765"
+					    android:textSize="@dimen/body_padding_large"
+					    android:textStyle="bold" />
+				</RelativeLayout>			
+		        
+		        
+		    <!-- search -->
+		    <RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.5"
+				android:layout_marginRight="15dp">
+					
+				<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:scaleType="fitXY"
+					android:layout_centerInParent="true"
+					android:textColor="@android:color/black"
+					android:background="@drawable/search"
+					android:id="@+id/search_btn"/>
+
+				<TextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+					android:layout_below="@+id/search_btn"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="14dp"
+				    android:textColor="#292765"
+				    android:textSize="@dimen/body_padding_large"
+				    android:textStyle="bold"
+				    android:text="@string/search" />
+
+			</RelativeLayout>    
+		    <!-- users -->    
+
+		</LinearLayout>
+		<!-- end 2nd row -->
+		
+		
+		<!-- start of the 3rd row -->
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		   		android:orientation="horizontal"
+				android:layout_marginTop="10dp"
+				android:weightSum="1"
+				android:layout_below="@+id/second_row"
+				android:baselineAligned="false"
+		        >
+			
+		       <!-- Group -->
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.5"
+					android:layout_marginLeft="15dp">
+					<Button
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:layout_centerInParent="true"
+						android:textColor="@android:color/black"
+						android:background="@drawable/hours"
+						android:id="@+id/hours_btn"/>
+	
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:layout_below="@+id/hours_btn"
+						android:layout_centerHorizontal="true"
+						android:layout_marginTop="14dp"
+					    android:text="@string/hours"
+					    android:textColor="#292765"
+					    android:textSize="@dimen/body_padding_large"
+					    android:textStyle="bold" />
+				</RelativeLayout>			
+		        
+		        
+		    <!-- more -->
+		    <RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.5"
+				android:layout_marginRight="15dp">
+					
+				<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:scaleType="fitXY"
+					android:layout_centerInParent="true"
+					android:textColor="@android:color/black"
+					android:background="@drawable/more"
+					android:id="@+id/more_btn"/>
+
+				<TextView
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+					android:layout_below="@+id/more_btn"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="14dp"
+					android:id="@+id/more_text"
+				    android:textColor="#292765"
+				    android:textSize="@dimen/body_padding_large"
+				    android:textStyle="bold"
+				    android:text="@string/more" />
+
+			</RelativeLayout>    
+		    <!-- users -->   
+		</LinearLayout>
+		<!-- end 3rd row -->
+
+	</RelativeLayout>
+
+	<!-- footer -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"    
+		android:layout_alignParentBottom="true"
+		android:id="@+id/footer"
+		android:visibility="gone">
+		<Button
+		    android:layout_width="45dp"
+		    android:layout_height="45dp"
+		    android:layout_alignParentRight="true"    
+		    android:id="@+id/info_btn"
+		    android:background="@drawable/hourworld_logo_new_500"
+		     />
+	</RelativeLayout>
+		
+		
+</RelativeLayout>

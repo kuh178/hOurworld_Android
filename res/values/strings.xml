@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Mobile Time Bank!</string>
+    <string name="app_name">hOurworld</string>
+    <string name="dateSliderTitle">Selected date</string>
+    
+    <string name="my_location">My location</string>
+    <string name="satellite_view">Switch view</string>
+    
+    <string name="check_for_updates">Checking for updates...</string>
+    
+    <string name="hourworld">hOurworld</string>
+    <string name="hourworld_statement">Peace, abundance and sharing through equality in exchange</string>
+    <string name="promo_text">Share this app and timebanking with your friends and earn an hour credit! (Click here)</string>
+    
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="join_hourworld">Join hOurworld</string>
+    <string name="about_hourworld">About hOurworld</string>
+    
+    <!-- main texts -->
+    <string name="announcements">Announcements</string>
+    <string name="offers">Offers</string>
+    <string name="requests">Requests</string>
+    <string name="search">Search</string>
+    <string name="groups">Groups</string>
+    <string name="hours">Hours</string>
+    <string name="more">More</string>
+    
+    <!-- Action Bar action items -->
+    <string name="action_search">Search</string>
+    <string name="action_location_found">Location Found</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_help">Help</string>
+    <string name="action_check_updates">Check for Updates</string>
+    <string name="action_new">Add</string>
+    <string name="action_send_now">Upload</string>
+    
+    <string name="action_report">Report</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_reply">Reply</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_more">More</string>
+    <string name="action_email">Email</string>
+  
+    <string name="search_hint">Enter a keyword</string>
+    <string name="menu">Menu</string>
+    <string name="two_arrows">>></string>
+    <string name="type_a_search_term">Type a search term</string>
+    
+    <string name="check_messages">Messages</string>
+    <string name="create_group">Create group</string>
+    <string name="search_group">Search group</string>
+    
+    <string name="logout">Logout</string>
+    
+    <string name="badges">Badges</string>
+    <string name="badge_1">Badge 1</string>
+    <string name="badge_2">Badge 2</string>
+    <string name="badge_3">Badge 3</string>
+    <string name="badge_4">Badge 4</string>
+    <string name="badge_5">Badge 5</string>
+    <string name="badge_6">Badge 6</string>
+    
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <string name="report_hours">Report Hours</string>
+    <string name="pick_a_member">Pick a member</string>
+    <string name="pick_cat_service">Pick a service/category</string>
+    <string name="task_description">Task description</string>
+    <string name="completed_date">Completed date</string>
+    <string name="add_date">Add date</string>
+    <string name="leave_a_note">Leave a note</string>
+    <string name="satisfaction_text">Were you satisfied with the service you received?</string>
+    <string name="reference_text">Would you be willing to be contacted by other members to provide a reference?</string>
+    
+    <string name="loading_title">Loading&#8230;</string>
+    <string name="title">Title</string>
+    
+    <string name="name">Name</string>
+    
+    <!-- mtb_profile 
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    -->
+    
+    <!-- MapKey -->
+    <!-- note: I removed the developer keys. You should generate it on your own -->
+	<string name="mapKeyDeveloper">0s7Km0gbaIiKBYVtiNAMqhcQ-GxiIzQLk9hfMVw</string>
+	<string name="mapKeyDeveloper2">0s7Km0gbaIiLZMleKkk70IIETcEve_rUT-kVErw</string>
+	<string name="mapKeyDeveloper3">AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw</string>
+	
+	<!--new key! (09162014) AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw -->
+	
+	<!-- <string name="mapKeyDeveloper3">0s7Km0gbaIiLTFNd22M3EVS_xWeuOhPmeDhOlmA</string> -->
+	<string name="mapKey2">0s7Km0gbaIiLZMleKkk70IIETcEve_rUT-kVErw</string>
+	<string name="mapKey">0s7Km0gbaIiLZMleKkk70IIETcEve_rUT-kVErw</string>
+	
+	<string name="search_prompt">Type</string>
+	<string-array name="search_arrays">
+        <item>All</item>
+        <item>Providers</item>
+        <item>Receivers</item>
+        <item>Members to Exchange Messages</item>
+        <item>Members by Bios</item>
+        <item>Members by Name</item>
+        <item>Mobile Phone Help</item>
+    </string-array>
+    
+	<string name="hour_prompt">Choose one</string>
+	<string-array name="hour_arrays">
+        <item>15 mins</item>
+        <item>30 mins</item>
+        <item>45 mins</item>
+        <item>60 mins</item>
+        <item>75 mins</item>
+        <item>90 mins</item>
+        <item>105 mins</item>
+        <item>120 mins</item>
+        <item>135 mins</item>
+        <item>150 mins</item>
+        <item>165 mins</item>
+        <item>180 mins</item>
+        <item>195 mins</item>
+        <item>210 mins</item>
+        <item>225 mins</item>
+        <item>240 mins</item>
+        <item>255 mins</item>
+        <item>270 mins</item>
+        <item>285 mins</item>
+        <item>300 mins</item>
+    </string-array>
+    
+	<string name="xdays_prompt">Choose one</string>
+	<string-array name="xdays_arrays">
+        <item>14 days</item>
+        <item>13 days</item>
+        <item>12 days</item>
+        <item>11 days</item>
+        <item>10 days</item>
+        <item>9 days</item>
+        <item>8 days</item>
+        <item>7 days</item>
+        <item>6 days</item>
+        <item>5 days</item>
+        <item>4 days</item>
+        <item>3 days</item>
+        <item>2 days</item>
+        <item>1 day</item>
+    </string-array>
+    
+	<string name="request_offer_expiration_prompt">Choose one</string>
+	<string-array name="request_offer_expiration_arrays">
+        <item>1 Year</item>
+        <item>9 Months</item>
+        <item>6 Months</item>
+        <item>3 Months</item>
+        <item>1 Month</item>
+        <item>3 Weeks</item>
+        <item>2 Weeks</item>
+        <item>1 Week</item>
+    </string-array>
+   
+	<string name="contact_list_prompt">Choose one</string>
+	<string-array name="contact_list_arrays">
+        <item>Address</item>
+        <item>Cell</item>
+        <item>Email1</item>
+        <item>Email2</item>
+        <item>Facebook</item>
+        <item>FAX1</item>
+        <item>FAX2</item>
+        <item>Home1</item>
+        <item>Home2</item>
+        <item>LinkedIn</item>
+        <item>Phone1</item>
+        <item>Phone2</item>
+        <item>Twitter</item>
+        <item>Website</item>
+        <item>Website2</item>
+        <item>Work1</item>
+        <item>Work2</item>
+    </string-array>
+    
+	
+	
+	
+</resources>

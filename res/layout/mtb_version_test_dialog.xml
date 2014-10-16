@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/customdialog"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="10dp"
+	android:background="@color/white"
+>
+    <ImageView 
+		android:layout_width="45dp"
+		android:layout_height="45dp"
+		android:layout_marginBottom="30dp"
+		android:scaleType="fitXY"
+		android:src="@drawable/hourworld_icon_30_30"
+		android:id="@+id/civicinity_logo"
+		/>
+    
+	<ProgressBar
+	    android:layout_below="@+id/civicinity_logo"
+	    android:layout_width="25dp"
+	    android:layout_height="25dp"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/progress_dialog"
+	    />
+	
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:text="@string/check_for_updates"
+	    android:layout_below="@+id/progress_dialog"
+	    android:textColor="@color/black"
+	    />
+</RelativeLayout>

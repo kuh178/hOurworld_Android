@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="Background_Gray">#333333</color>
+	<color name="Background_Light_Yellow">#ffffe0</color>
+	<color name="darkblue_main">#292765</color>
+	<color name="transparent">#00000000</color>
+	<color name="bright_blue">#1750a4</color>
+	
+	<color name="black">#FF000000</color>
+ 	<color name="blue">#FF0000FF</color>
+  	<color name="darkgray">#FF444444</color>
+  	<color name="gold">#FFffd700</color>
+  	<color name="gray">#FFAAAAAA</color>
+  	<color name="lightblue">#FF00FFFF</color>
+  	<color name="opaque_shadow">#70000000</color>
+  	<color name="red">#FFFF0000</color>
+  	<color name="stat_label_background">#FFF0F0F0</color>
+  	<color name="stat_label_text">#FF0F0F0F</color>
+  	<color name="white">#FFFFFFFF</color>
+  	<color name="stalegray">#FFB9D3EE</color>
+  	<color name="title_bar_color">#1b4e76</color>
+  	<color name="twitter_color">#4099FF</color>
+  	<color name="lightskyblue">#87cefa</color>
+  	<color name="steelblue">#4682b4</color>
+  	<color name="skyblue">#87ceeb</color>
+  	<color name="wordpress_blue">#21759b</color>
+  	<color name="skype_blue">#12A5F4</color>
+  	<color name="twitter_darkblue">#0084b4</color>
+  	<color name="royalblue">#4169e1</color>
+	
+	
+	<drawable name="white">#FFFFFF</drawable>
+	<drawable name="lightgray">#BFBFBF</drawable>
+	<drawable name="darkgray">#AAAAAA</drawable>
+	<drawable name="black">#000000</drawable>
+	<drawable name="darkbrown">#493930</drawable>
+	<drawable name="tan">#F2F1DF</drawable>
+	<drawable name="darkblue">#F2F1DF</drawable>
+	<drawable name="gogreen">#2D9900</drawable>
+	<drawable name="stopred">#990000</drawable>
+	<drawable name="gray">#808080</drawable>
+	<drawable name="app_gray">#625454</drawable>
+
+	
+	
+</resources>

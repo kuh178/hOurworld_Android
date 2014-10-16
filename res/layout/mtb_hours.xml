@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+     <!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text="@string/report_hours"
+			android:layout_gravity="center"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+    
+    
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/title_bar"
+		android:layout_above="@+id/line"
+	>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="5dp"
+		>
+			<!-- task summary -->
+			<LinearLayout
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:id="@+id/task_summary"
+		    	android:orientation="vertical"
+		    	>
+		    	
+		    
+			</LinearLayout>
+			
+			<!-- Activity -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/activity_layout"
+			    android:visibility="gone"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/task_description"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:id="@+id/task_description"
+				    />
+			</LinearLayout>
+			
+			<!-- Member -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/member_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/pick_a_member"
+					android:textSize="15sp"
+					android:textStyle="bold"
+					android:focusable="true"
+					android:focusableInTouchMode="true"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<Button
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:text="@string/pick_a_member"
+					android:textSize="14sp"
+					android:id="@+id/member_btn"
+					android:layout_gravity="center"
+				/>
+			</LinearLayout>
+			
+			<!-- Category / Service -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/cat_service_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/pick_cat_service"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<Button
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:text="@string/pick_cat_service"
+					android:textSize="14sp"
+					android:id="@+id/cat_service_btn"
+					android:layout_gravity="center"
+				/>
+			</LinearLayout>
+			
+			<!-- Date -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/date_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/completed_date"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<Button
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:text="@string/add_date"
+					android:textSize="14sp"
+					android:id="@+id/date_btn"
+					android:layout_gravity="center"
+				/>
+			</LinearLayout>
+			
+			<!-- Hours -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/hour_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/hours"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<Spinner
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:id="@+id/spinner"
+					android:entries="@array/hour_arrays"
+					android:prompt="@string/hour_prompt"
+					android:layout_gravity="center"
+				/>
+			</LinearLayout>
+			
+			<!-- Note -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/note_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/leave_a_note"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<EditText
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:minLines="3"
+					android:textSize="15sp"
+					android:id="@+id/note_edit"
+					android:layout_gravity="center"
+				/>
+			</LinearLayout>
+			
+			<!-- Satisfaction -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/satisfaction_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/satisfaction_text"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<RadioGroup
+			        android:id="@+id/radioSatisfaction"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal" >
+			 
+			        <RadioButton
+			            android:id="@+id/radioSatYes"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/yes" 
+			            android:checked="true" />
+			 
+			        <RadioButton
+			            android:id="@+id/radioSatNo"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/no" />
+			    </RadioGroup>
+			</LinearLayout>
+			
+			<!-- Reference -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+			    android:orientation="vertical"
+			    android:weightSum="1"
+			    android:id="@+id/reference_layout"
+			    >
+				<TextView 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="@string/reference_text"
+					android:textSize="15sp"
+					android:textStyle="bold"
+				    />
+				<View
+					android:layout_width="fill_parent"
+					android:layout_height="2dp"
+					android:background="@drawable/blue_bar" />
+				<RadioGroup
+			        android:id="@+id/radioReference"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal" >
+			 
+			        <RadioButton
+			            android:id="@+id/radioRefYes"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/yes" />
+			 
+			        <RadioButton
+			            android:id="@+id/radioRefNo"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="@string/no"
+			            android:checked="true" />
+			    </RadioGroup>
+			</LinearLayout>
+			
+		</LinearLayout>
+	</ScrollView>
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+		android:layout_above="@+id/lower"
+		android:id="@+id/line"
+		android:background="@drawable/blue_bar"
+    />  	
+  	<LinearLayout
+	  	android:id="@+id/lower"
+	  	android:layout_alignParentBottom="true"
+		android:layout_width="fill_parent"
+		android:layout_height="52dp"
+		android:gravity="center"
+		android:orientation="horizontal">
+		<Button
+		  	android:layout_width="fill_parent"
+		  	android:layout_height="wrap_content"
+		  	android:id="@+id/report_hours"
+		  	android:textSize="14sp"
+		  	android:text="Report hours"
+		  	android:layout_weight="0.5"
+		/>
+  	</LinearLayout>
+</RelativeLayout>

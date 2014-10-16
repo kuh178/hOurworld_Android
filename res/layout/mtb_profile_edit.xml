@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    
+    <!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:id="@+id/my_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text=" User Profile"
+			android:layout_gravity="center"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/title_bar"
+		android:layout_above="@+id/footer"
+		android:id="@+id/scroll_view"
+		android:layout_marginBottom="15dp"
+	>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="5dp"
+		>
+		<RelativeLayout 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			
+		    <ProgressBar 
+		        android:layout_width="30dp"
+		        android:layout_height="30dp"
+		        android:id="@+id/spinner"
+		        android:layout_centerVertical="true"
+		        android:layout_marginLeft="15dp"
+		        android:visibility="gone"
+		        />
+		    <ImageView 
+		        android:layout_width="100dp"
+		        android:layout_height="100dp"
+		        android:id="@+id/user_image"
+		        />
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/user_image"
+			   	android:layout_centerVertical="true"
+				android:orientation="horizontal"
+		        >
+			   	<TextView 
+			   	    android:layout_width="wrap_content"
+			   	    android:layout_height="wrap_content"
+			   	    android:text="Username"
+			   	    android:textStyle="bold"
+			   	    android:textSize="17sp"
+			   	    android:id="@+id/username"
+			   	    android:focusable="true"
+			   	    android:focusableInTouchMode="true"
+			   	    />
+		   	</LinearLayout>
+		</RelativeLayout>
+
+		<!-- Contact -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    android:id="@+id/contact_layout"
+		    >
+			<TextView 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Contact"
+				android:textSize="15sp"
+				android:textStyle="bold"
+			    />
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<EditText
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="contact"
+				android:textSize="15sp"
+				android:id="@+id/contact"
+				android:layout_gravity="center"
+				android:autoLink="all"
+				android:lines="3"
+			/>
+		</LinearLayout>
+		
+		<!-- Address  -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    android:id="@+id/address_layout"
+		    >
+			<TextView 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Address"
+				android:textSize="15sp"
+				android:textStyle="bold"
+			    />
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<EditText
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="address"
+				android:textSize="15sp"
+				android:id="@+id/address_text"
+				android:layout_gravity="center"
+				android:lines="3"
+			/>
+		</LinearLayout>
+		
+		<!-- message -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    android:id="@+id/bio_layout"
+		    >
+			<TextView 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Bio"
+				android:textSize="15sp"
+				android:textStyle="bold"
+			    />
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<EditText
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="message"
+				android:textSize="15sp"
+				android:id="@+id/bio_text"
+				android:layout_gravity="center"
+				android:lines="3"
+			/>
+		</LinearLayout>
+
+		<!-- group history -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    >
+			<TextView 
+			    android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="2dp"
+				android:text="Groups"
+				android:textSize="15sp"
+				android:textStyle="bold"
+			    />
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar"/>
+			<TableLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/group_super_view"
+			></TableLayout>
+		</LinearLayout>
+	</LinearLayout>
+	</ScrollView>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center"
+	    android:layout_gravity="center"
+	    android:id="@+id/footer"
+	    android:visibility="gone"
+	    >
+	    <Button
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/message_btn"
+	        android:text="Send Message"
+	        />
+	    
+	</LinearLayout>
+</RelativeLayout>

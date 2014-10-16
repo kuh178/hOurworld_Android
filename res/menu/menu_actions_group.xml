@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:compat="http://schemas.android.com/apk/res-auto" >
+
+    <!-- Search group -->
+    <item android:id="@+id/search_group"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/search_group"
+          android:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_action_overflow"
+        android:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <!-- Create group -->
+		    <item android:id="@+id/create_group"
+		          android:icon="@drawable/ic_action_new"
+		          android:title="@string/create_group"
+		          android:showAsAction="ifRoom|withText" />
+            <!-- Message -->
+		    <item android:id="@+id/check_messages"
+		          android:icon="@drawable/ic_action_email"
+		          android:title="@string/check_messages"
+		          android:showAsAction="ifRoom|withText" />
+        </menu>
+ 	</item>
+</menu>

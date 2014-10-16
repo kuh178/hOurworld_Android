@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/inner_content" >
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:background="@color/title_bar_color"
+        android:id="@+id/header"
+        android:visibility="gone">
+
+        <Button style="@android:style/Widget.Button.Small"
+            android:id="@+id/menu_btn"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text=">>" />
+       	
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menu_btn"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="Menu"
+            android:id="@+id/menu_text"/>
+    </RelativeLayout>
+    
+	
+	 <ImageView  
+		android:id="@+id/hourworld_logo"
+		android:layout_below="@+id/header"
+		android:src="@drawable/hourworld3"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:adjustViewBounds="true"
+		android:layout_margin="5dp"/>
+	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listview"
+	    android:layout_below="@+id/hourworld_logo"
+	    />
+</RelativeLayout>

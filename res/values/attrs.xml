@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GalleryTheme">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+    <declare-styleable name="Gallery1">
+		<attr name="android:galleryItemBackground"/>
+	</declare-styleable>
+    <declare-styleable name="ScrollLayout">
+        <attr name="labelerClass" format="string"/>
+        <attr name="labelerFormat" format="string"/>
+        <attr name="childWidth" format="dimension"/>
+        <attr name="childHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

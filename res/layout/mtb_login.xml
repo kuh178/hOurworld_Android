@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/skype_blue"
+    >
+
+		<ImageView  
+	        android:id="@+id/hourworld_logo"
+			android:src="@drawable/hourworld3"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:adjustViewBounds="true"
+			android:layout_margin="5dp"
+			android:visibility="gone"/>
+		
+		<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_gravity="center" 
+			android:textColor="@android:color/black" 
+			android:text="hOurworld mobile" 
+			android:textSize="16dp" 
+			android:typeface="normal" 
+			android:textStyle="bold" 
+			android:id="@+id/title_text" 
+			android:gravity="center" 
+			android:layout_marginLeft="5dp" 
+			android:layout_marginBottom="15dp" 
+			android:layout_marginRight="5dp"
+			android:visibility="gone"/>
+				
+		<LinearLayout 
+			android:id="@+id/login_interact_area"
+			android:orientation="vertical" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_gravity = "center"
+			android:padding="10dp"
+			android:visibility="gone">
+		
+		<TextView
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:text="Login with"
+		  	android:textColor="@android:color/white"
+		  	android:textSize="18sp"
+		  	android:textStyle="bold"
+		/>
+	</LinearLayout>
+	
+	
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:orientation="horizontal"
+	    android:layout_gravity="center"
+	    android:gravity="center" >
+
+	    <Button
+	        android:id="@+id/fb_login_button"
+	        android:layout_width="55dp"
+	        android:layout_height="55dp"
+	        android:layout_marginLeft="15dp"
+	        android:background="@drawable/home_btn_facebook_login"
+	        android:visibility="gone" />
+
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_centerInParent="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="10dp"
+		android:layout_above="@+id/input_layout"
+		>
+	    
+		<TextView
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:text="@string/hourworld"
+		  	android:textColor="@android:color/white"
+		  	android:layout_marginBottom="10dp"
+		  	android:textSize="21sp"
+		  	android:layout_gravity="center"
+		/>
+		
+		<TextView
+		  	android:layout_width="wrap_content"
+		  	android:layout_height="wrap_content"
+		  	android:text="@string/hourworld_statement"
+		  	android:textColor="@android:color/white"
+		  	android:textSize="16sp"
+		  	android:gravity="center"
+		  	android:paddingLeft="30dp"
+		  	android:paddingRight="30dp"
+		  	android:layout_gravity="center"
+		/>
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:id="@+id/input_layout"
+		android:layout_above="@+id/login_layout"
+		android:layout_marginBottom="10dp"
+		>
+		
+	    <EditText
+	        android:layout_width="240dp" 
+			android:layout_height="40dp"
+			android:layout_gravity="center"
+			android:textSize="14sp"
+			android:background="@drawable/roundedcorner_white"
+			android:hint="@string/email"
+			android:id="@+id/email"
+			android:layout_marginBottom="5dp"
+			android:paddingLeft="10dp"
+	        />
+	     <EditText
+	        android:layout_width="240dp" 
+			android:layout_height="40dp"
+			android:layout_gravity="center"
+			android:inputType="textPassword"
+			android:textSize="14sp"
+			android:background="@drawable/roundedcorner_white"
+			android:hint="@string/password"
+			android:id="@+id/password"
+			android:paddingLeft="10dp"
+	        />   
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_centerInParent="true"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/login_layout"
+		>
+	    <Button 
+			android:id="@+id/login_button" 
+			android:layout_width="150dp" 
+			android:layout_height="40dp" 
+			android:background="@drawable/roundedcorner" 
+			android:textColor="@color/white" 
+			android:layout_marginBottom="5dp" 
+			android:focusable="true"  
+			android:text="@string/login" 
+			android:layout_marginRight="2dp" 
+			android:textSize="14sp"
+			android:layout_gravity="center"
+		/> 
+	    
+	</LinearLayout>
+	
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/login_layout"
+		android:id="@+id/button_layout"
+		>    
+
+		<Button 
+			android:id="@+id/register_button" 
+			android:layout_width="150dp" 
+			android:layout_height="40dp" 
+			android:background="@drawable/roundedcorner" 
+			android:textColor="@color/white" 
+			android:layout_marginBottom="5dp" 
+			android:focusable="true"  
+			android:text="@string/join_hourworld" 
+			android:layout_marginRight="2dp" 
+			android:textSize="14sp"
+			android:layout_gravity="center"
+		/>
+		
+		<Button 
+			android:id="@+id/about_button" 
+			android:layout_width="150dp" 
+			android:layout_height="40dp" 
+			android:background="@drawable/roundedcorner" 
+			android:textColor="@color/white" 
+			android:layout_marginBottom="5dp" 
+			android:focusable="true"  
+			android:text="@string/about_hourworld" 
+			android:layout_marginRight="2dp" 
+			android:textSize="14sp"
+			android:layout_gravity="center"
+		/>
+	</LinearLayout>
+</RelativeLayout>
+
+	

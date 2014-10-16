@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="android-support-v4" level="project" />
+    <orderEntry type="library" name="facebook-like slide-out navigation" level="project" />
+    <orderEntry type="library" name="android-support-v45" level="project" />
+    <orderEntry type="library" name="android-support-v44" level="project" />
+    <orderEntry type="library" name="android-support-v43" level="project" />
+    <orderEntry type="library" name="apps-marketplace" level="project" />
+    <orderEntry type="library" name="libs3" level="project" />
+    <orderEntry type="library" name="libs5" level="project" />
+    <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="library" name="libGoogleAnalyticsServices" level="project" />
+    <orderEntry type="library" name="libs2" level="project" />
+    <orderEntry type="library" name="JARs" level="project" />
+    <orderEntry type="library" name="android-support-v46" level="project" />
+    <orderEntry type="library" name="android-support-v41" level="project" />
+    <orderEntry type="library" name="android-support-v42" level="project" />
+    <orderEntry type="library" name="libs6" level="project" />
+    <orderEntry type="library" name="libs4" level="project" />
+    <orderEntry type="library" name="libs1" level="project" />
+    <orderEntry type="module" module-name="sample1" />
+    <orderEntry type="module" module-name="MobileTimeBanking" />
+    <orderEntry type="module" module-name="lib" />
+  </component>
+</module>
+

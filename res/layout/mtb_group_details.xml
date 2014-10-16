@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    
+    <!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:id="@+id/my_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text=" Group information"
+			android:layout_gravity="center"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="5dp"
+		android:layout_below="@+id/title_bar"
+		android:id="@+id/main_layout"
+	>
+
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Groupname"
+			android:textStyle="bold"
+			android:textSize="18sp"
+			android:id="@+id/group_name"
+		/>    
+		
+		<!-- group description -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    android:id="@+id/activity_layout"
+		    >
+			<TextView 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Description"
+				android:textSize="17sp"
+				android:textStyle="bold"
+				android:layout_marginTop="1dp"
+				/>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="no description"
+				android:textSize="15sp"
+				android:id="@+id/group_description"
+				android:layout_gravity="center"
+				android:autoLink="all"
+			/>
+		</LinearLayout>
+		
+		<!-- owner -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:id="@+id/contact_layout"
+			>
+			<TextView 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Owner"
+				android:textSize="17sp"
+				android:textStyle="bold"
+				android:layout_marginTop="2dp"
+			/>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<TextView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="group owner"
+				android:textSize="15sp"
+				android:id="@+id/group_owner"
+				android:layout_gravity="center"
+				android:autoLink="all"
+			/>
+		</LinearLayout>
+		
+		<!-- shared messages -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+			android:orientation="vertical"
+			android:weightSum="1"
+			android:id="@+id/shared_message_layout"
+			android:visibility="gone"
+			>
+			<TextView 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Shared messages"
+				android:textSize="17sp"
+				android:textStyle="bold"
+				android:layout_marginTop="2dp"
+			/>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+			<Button
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="See shared messages"
+				android:textSize="15sp"
+				android:id="@+id/shared_messages_btn"
+				android:layout_gravity="center"
+			/>
+		</LinearLayout>
+		
+		<!-- member lists  -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="15dp"
+		    android:orientation="vertical"
+		    android:weightSum="1"
+		    android:id="@+id/member_list_layout"
+		    >
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Members"
+				android:textSize="17sp"
+				android:textStyle="bold"
+				android:id="@+id/member_list_title"
+				android:layout_marginTop="2dp"
+			/>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="2dp"
+				android:background="@drawable/blue_bar" />
+				
+			<ProgressBar
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="5dp"
+				android:layout_gravity="center"
+				android:id="@+id/loading_bar"
+			/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:id="@+id/loading_text"
+				android:text="Loading members list"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+			/>
+		</LinearLayout>
+	</LinearLayout>
+	<ListView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/main_layout"
+		android:layout_above="@+id/line"
+		android:id="@+id/member_list"
+	/>
+	<View
+		android:id="@+id/line"
+		android:layout_width="fill_parent"
+		android:layout_height="2dp"
+        android:layout_above="@+id/footer"
+		android:background="@drawable/blue_bar" />
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center"
+	    android:layout_gravity="center"
+	    android:id="@+id/footer"
+	    android:weightSum="1"
+	    android:padding="3dp"
+	    >
+	    <Button
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:id="@+id/message_btn"
+	        android:text="Send Message"
+	        android:textSize="14sp"
+	        />
+	    <Button
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:id="@+id/leave_btn"
+	        android:text="Leave this group"
+	        android:textSize="14sp"
+	        />
+	</LinearLayout>
+</RelativeLayout>

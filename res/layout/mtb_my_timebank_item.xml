@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:padding="8dp">
+  
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_images"
+        android:layout_alignParentLeft="true"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/user_image1_view"
+            >
+	        <ImageView
+	            android:layout_width="35dp"
+	        	android:layout_height="35dp"
+	        	android:id="@+id/user_image1"
+	        	android:background="@drawable/who_checkin_default"
+	            />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/user_image2_view"
+	        android:layout_toRightOf="@+id/user_image1_view"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="-7dp"
+            >
+	        <ImageView
+	            android:layout_width="35dp"
+	        	android:layout_height="35dp"
+	        	android:id="@+id/user_image2"
+	        	android:background="@drawable/who_checkin_default"
+	            />
+        </RelativeLayout>
+    </RelativeLayout>
+    	
+    <RelativeLayout
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+	    android:layout_toRightOf="@+id/user_images">
+    
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/upper_view">
+			<TextView
+			  	android:layout_width="wrap_content"
+			  	android:layout_height="wrap_content"
+			  	android:layout_marginTop="2dp"
+			  	android:textSize="17sp"
+			  	android:textStyle="bold"
+			  	android:text="title"
+			  	android:id="@+id/title"
+			  />
+			<TextView
+			  	android:layout_width="wrap_content"
+			  	android:layout_height="wrap_content"
+			  	android:layout_alignParentRight="true"
+			  	android:textSize="13sp"
+			  	android:text="Evaluate!"
+			  	android:textStyle="bold"
+			  	android:textColor="@color/blue"
+			  	android:id="@+id/evaluate"
+			  	android:visibility="gone"
+			  />
+		</RelativeLayout>
+		
+		<TextView
+		    android:id="@+id/message"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/upper_view"
+		    android:layout_marginTop="2dp"
+		    android:text="message"
+		    android:textColor="@drawable/gray"
+		    android:textSize="14sp" />
+	</RelativeLayout>
+</RelativeLayout>

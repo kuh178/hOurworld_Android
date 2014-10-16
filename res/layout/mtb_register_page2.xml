@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    
+    <!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:id="@+id/my_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text=" (Registration) Fill out the form"
+			android:layout_gravity="center"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+ 
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/title_bar"
+		android:layout_above="@+id/footer"
+		android:id="@+id/scroll_view"
+		android:layout_marginBottom="15dp"
+		
+	>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="5dp"
+		>
+		<!-- Activity -->
+		
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Name"
+			android:textSize="15sp"
+			android:textStyle="bold"
+			/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.5"
+			    android:id="@+id/firstname"
+			    android:hint="First name"
+			    />
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.5"
+			    android:id="@+id/lastname"
+			    android:hint="Last name"
+			    />
+		</LinearLayout>
+		
+		<!-- address -->
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Address"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/street"
+			    android:hint="Street"
+			    />
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+		    android:orientation="horizontal"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/city"
+			    android:hint="City"
+			    />
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+		    android:orientation="horizontal"
+		    android:weightSum="1"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.5"
+			    android:id="@+id/state"
+			    android:hint="State"
+			    />
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.5"
+			    android:id="@+id/zip"
+			    android:hint="Zip code"
+			    android:inputType="number"
+			    />
+		</LinearLayout>
+		
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Birthdate (mm/dd/yyyy)"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<!-- birthdate: mm/dd/yyyy -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.33"
+			    android:id="@+id/month"
+			    android:hint="Month"
+			    android:inputType="number"
+			    />
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.33"
+			    android:id="@+id/day"
+			    android:hint="Day"
+			    android:inputType="number"
+			    
+			    />
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.34"
+			    android:id="@+id/year"
+			    android:hint="Year"
+			    android:inputType="number"
+			    />
+		</LinearLayout>
+		
+		<!--  email -->
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Email"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/email"
+			    android:hint="abc@mail.com"
+			    />
+		</LinearLayout>
+		
+		
+		<!-- password -->
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Password"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/password"
+			    android:hint="Password"
+			   	android:password="true"
+			    />
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/password_again"
+			    android:hint="Type password again"
+			   	android:password="true"
+			    />
+		</LinearLayout>
+		
+		<!--  bio -->
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Bio"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/bio"
+			    android:minLines="4"
+			    android:hint="Bio"
+			    />
+		</LinearLayout>
+		
+		<!--  phone -->
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Phone"
+			android:textSize="15sp"
+			android:textStyle="bold"/>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1dp"
+			android:background="@drawable/blue_bar" />
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    >
+			<EditText
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/phone"
+			    android:hint="123-456-7890"
+			    android:inputType="number"
+			    />
+		</LinearLayout>
+		
+		<!-- reference1 -->
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:id="@+id/reference_layout">
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@drawable/blue_bar" />
+			<TextView 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="Please provide two personal references below. Please provide a phone number for each reference. 
+							\n\nNO family or household members as references please! 
+							\n\nWe CHECK all references to keep you and our membership safe."
+				android:textSize="15sp"
+				android:textStyle="bold"/>
+			<Button
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="What is this?"
+			    android:id="@+id/referenceBtn"
+			    />
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@drawable/blue_bar" />
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    >
+			    <TextView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Personal reference name"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refname1"
+				    android:hint="Name"
+				    />
+				<TextView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Email address or Phone number"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refemail1"
+				    android:hint="Email address"
+				    />
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refphone1"
+				    android:hint="Phone number"
+				    />
+			</LinearLayout>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:background="@drawable/blue_bar" />
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    >
+				<TextView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Name"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refname2"
+				    android:hint="Personal reference name"
+				    />
+				<TextView 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Email address or Phone number"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refemail2"
+				    android:hint="Email address"
+				    />
+				<EditText
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/refphone2"
+				    android:hint="Phone number"
+				    />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+	
+	</ScrollView>
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center"
+	    android:layout_gravity="center"
+	    android:id="@+id/footer"
+	    >
+	    <Button
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/register_btn"
+	        android:text="Register"
+	        />
+	    
+	</LinearLayout>
+</RelativeLayout>

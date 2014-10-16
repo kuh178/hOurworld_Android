@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/grid_item">
+  
+  <ProgressBar
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:id="@+id/spinner"
+      android:gravity="center"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="5dp"
+      android:visibility="gone"
+      
+      />
+  <RelativeLayout 
+      android:layout_width="63dp"
+	  android:layout_height="63dp"
+	  android:id="@+id/wrap_icon">
+	  <ImageView
+	    android:layout_marginTop="5dp"
+	    android:layout_marginLeft="5dp"
+	   	android:layout_width="60dp"
+	   	android:layout_height="60dp"
+	   	android:id="@+id/user_profile_img"
+	      />
+  </RelativeLayout>
+  <LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_marginLeft="10dp"
+	android:layout_marginTop="5dp"
+  >   
+    <TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="task_type"
+		android:textSize="12sp"
+		android:textStyle="bold"
+		android:id="@+id/task_type"
+		android:gravity="center_horizontal"
+	  	/>
+	<TextView
+	  	android:layout_width="wrap_content"
+	  	android:layout_height="wrap_content"
+	  	android:layout_marginTop="3dp"
+	  	android:layout_marginBottom="5dp"
+	  	android:text="description"
+	  	android:textSize="14sp"
+	  	android:textStyle="italic"
+	  	android:id="@+id/task_description"
+	  />
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="About the app"
+        android:textSize="17sp"
+        android:textStyle="bold" 
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="The National Science Foundation (NSF) has funded a team of researchers at the Palo Alto Research Center (PARC), and the Pennsylvania State University (PSU) to conduct scientific research into timebanking.\n\nTheir goal is to understand timebanking practices and the role that technology plays in enabling them and to develop new innovative technologies to make it much easier to do and more popular. This material is based upon work supported by the National Science Foundation under Grant No. IIS-1218544"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:autoLink="all"
+        android:text="The hOurworld founders and software architects have agreed to support this research free of charge.\n\nAll the Best,\nHEP, hOurworld, PARC and PSU"
+        />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Stephen Beckett"
+            android:textStyle="bold"
+            />
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="stephen@hourworld.org"
+            android:autoLink="all"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:visibility="gone"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Keith Han"
+            android:textStyle="bold"
+            />
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="kuh178@psu.edu"
+            android:autoLink="all"
+            />
+    </LinearLayout>
+    
+    </LinearLayout>
+     </ScrollView>
+</LinearLayout>

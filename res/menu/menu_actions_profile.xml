@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:compat="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_action_overflow"
+        android:showAsAction="always"
+        android:title="@string/action_more">
+        <menu>
+            <!-- Logout -->
+		    <item android:id="@+id/logout"
+		          android:icon="@drawable/ic_action_accounts"
+		          android:title="@string/logout"
+		          android:showAsAction="ifRoom|withText" />
+        </menu>
+ 	</item>
+</menu>

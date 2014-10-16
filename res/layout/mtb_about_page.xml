@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Phone"
+            android:textStyle="bold"
+            />
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="(207) 232-7938"
+            android:autoLink="all"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Email"
+            android:textStyle="bold"
+            />
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="linda@hourworld.org"
+            android:autoLink="all"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Website"
+            android:textStyle="bold"
+            />
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="http://www.hourworld.org/"
+            android:autoLink="all"
+            />
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="About"
+        android:textSize="17sp"
+        android:textStyle="bold" 
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Peace, abundance, and sharing through equality in exchange. hOurworld is a support organization for hour exchanges across the United States; providing software, training, and consulting. Learn how to share services and build community at the same time!"
+        />
+
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Mission"
+        android:textSize="15sp"
+        android:textStyle="bold" 
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="We believe community currencies have the power to redirect our energies in a positive, restorative and healthy direction. They seed empowerment and new (old) ways of thinking about the way we work and think about the nature of money and wealth."
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="We offer free software as an essential tool to track and encourage community interaction. We have been gathering best practices from the time banking movement and have created Immersion trainings to support regional dissemination of the skills to start and run an exchange. We are working deeper with communities that are creating synergies with existing community organizations to help transition these organizations with an infusion of community capital as traditional sources fade."
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="With the economy and the ecology in crisis, we don't need another movement, we need movements moving together. We encourage this nationally between hOurworld and TBUSA and sister organizations we see that share aspects of our philosophy: creating peace, abundance and sharing in the local economy and ecosystem. We are developing relationships with Buy Local and Transition Town initiatives because we feel these organizations embody aspects of our mission."
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="In each of our efforts, be they building software, setting up training hubs or supporting local synergies, we are building models of sustainability that will be essential for this movement to become a powerful force for positive change."
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Join us in hOurworld and let's create an economy that is as generous and just as the planet that supports us."
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Description"
+        android:textSize="15sp"
+        android:textStyle="bold" 
+        />
+     
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="hOurworld exists to welcome and connect all varieties of local exchanges under one roof. This allows interaction between member exchanges everywhere, as their interests and needs arise. The hOurworld Train the Trainer program teaches the fundamentals for organizing, building and enriching new and existing time banks. This model provides a recipe for program nurturing and growth towards maturity. As each new exchange develops it can seed another through the sharing of resources. And that exchange will seed another... and another..."
+        />
+     </LinearLayout>
+     </ScrollView>
+</LinearLayout>

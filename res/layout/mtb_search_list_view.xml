@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/inner_content" >
+	
+    <ProgressBar
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_centerInParent="true"
+		android:id="@+id/spinner"
+		android:visibility="gone"
+	/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_below="@+id/spinner"
+		android:id="@+id/loading_text"
+		android:text="@string/type_a_search_term"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+	/>
+	
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:background="@color/title_bar_color"
+        android:id="@+id/header"
+        android:visibility="gone">
+
+        <Button style="@android:style/Widget.Button.Small"
+            android:id="@+id/menu_btn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/two_arrows" />
+       	
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menu_btn"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="@string/menu"
+            android:id="@+id/menu_text"/>
+    </RelativeLayout>
+	
+	
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/header"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:id="@+id/search_layout">
+
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:weightSum="1"
+	        >
+	    
+	        <EditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.3"
+	            android:id="@+id/search_term"
+	            android:layout_gravity="center"
+	            android:hint=""
+	            />
+	        <Button 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.7"
+	            android:text="@string/search"
+	            android:textSize="14sp"
+	            android:id="@+id/search_submit"
+	            android:layout_gravity="center"
+	            />
+        </LinearLayout>
+    </RelativeLayout>
+	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listview"
+	    android:layout_below="@+id/search_layout"
+	    />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/inner_content" >
+	
+    <ProgressBar
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_centerInParent="true"
+		android:id="@+id/spinner"
+	/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_below="@+id/spinner"
+		android:id="@+id/loading_text"
+		android:text="Loading offers..."
+	/>
+	
+	<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:background="@color/title_bar_color"
+        android:id="@+id/header"
+        android:visibility="gone">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/menu_btn"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="Menu"
+            android:id="@+id/menu_text"/>
+ 
+    </RelativeLayout>
+	
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listview"
+	    android:layout_below="@+id/header"
+	    android:layout_above="@+id/line"
+	    />
+</RelativeLayout>

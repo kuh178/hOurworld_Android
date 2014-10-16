@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edu.psu.ist.mtb_hourworld.datetime.SliderContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/edu.psu.ist.mtb_hourworld"
+    android:id="@+id/dateSliderContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <edu.psu.ist.mtb_hourworld.datetime.ScrollLayout
+        style="@style/Scroller"
+        app:labelerClass="edu.psu.ist.mtb_hourworld.datetime.MonthYearLabeler"
+        app:labelerFormat="%tb %tY"
+        app:childWidth="180dp"/>
+    <edu.psu.ist.mtb_hourworld.datetime.ScrollLayout
+        style="@style/Scroller"
+        app:labelerClass="edu.psu.ist.mtb_hourworld.datetime.DayDateLabeler"
+        app:labelerFormat="%td %ta"
+        app:childWidth="120dp"/>
+    <edu.psu.ist.mtb_hourworld.datetime.ScrollLayout
+        style="@style/Scroller"
+        app:labelerClass="edu.psu.ist.mtb_hourworld.datetime.TimeLabeler"
+        app:labelerFormat="%tR"
+        app:childWidth="80dp"/>
+    <include layout="@layout/dialogbuttons"/>
+</edu.psu.ist.mtb_hourworld.datetime.SliderContainer>

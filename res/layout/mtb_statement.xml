@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/inner_content" >
+    <ProgressBar
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_centerInParent="true"
+		android:id="@+id/loading_bar"
+	/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_below="@+id/loading_bar"
+		android:id="@+id/loading_text"
+		android:text="Loading statement..."
+	/>
+	<!-- Header -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title_bar"
+		android:visibility="gone"
+	>
+		<TextView
+			android:id="@+id/my_title"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_bar_color"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:text=" Statement"
+			android:layout_gravity="center"
+		/>
+	</RelativeLayout>
+	<!-- end Header -->  
+    
+	<ListView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/listview"
+	    android:layout_below="@+id/title_bar"
+	    />
+</RelativeLayout>
