@@ -1248,7 +1248,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int action_item_btn=0x7f020057;
         public static final int action_item_selected=0x7f020058;
-        public static final int app_gray=0x7f0200d9;
+        public static final int app_gray=0x7f0200db;
         public static final int arrow_down=0x7f020059;
         public static final int arrow_up=0x7f02005a;
         public static final int background_em=0x7f02005b;
@@ -1257,7 +1257,7 @@ containing a value of this type.
         public static final int balloon_overlay_focused=0x7f02005e;
         public static final int balloon_overlay_unfocused=0x7f02005f;
         public static final int banner_guardians4_flat=0x7f020060;
-        public static final int black=0x7f0200d2;
+        public static final int black=0x7f0200d4;
         public static final int blue_bar=0x7f020061;
         public static final int button=0x7f020062;
         public static final int button_focused=0x7f020063;
@@ -1286,15 +1286,15 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02007a;
         public static final int common_signin_btn_text_pressed_dark=0x7f02007b;
         public static final int common_signin_btn_text_pressed_light=0x7f02007c;
-        public static final int darkblue=0x7f0200d5;
-        public static final int darkbrown=0x7f0200d3;
-        public static final int darkgray=0x7f0200d1;
+        public static final int darkblue=0x7f0200d7;
+        public static final int darkbrown=0x7f0200d5;
+        public static final int darkgray=0x7f0200d3;
         public static final int edit_icon_default=0x7f02007d;
         public static final int facebook_login=0x7f02007e;
         public static final int facebook_login_down=0x7f02007f;
         public static final int filter_icon_default=0x7f020080;
-        public static final int gogreen=0x7f0200d6;
-        public static final int gray=0x7f0200d8;
+        public static final int gogreen=0x7f0200d8;
+        public static final int gray=0x7f0200da;
         public static final int group=0x7f020081;
         public static final int heart=0x7f020082;
         public static final int home_btn_facebook_login=0x7f020083;
@@ -1305,78 +1305,80 @@ containing a value of this type.
         public static final int hourworld_icon_30_30=0x7f020088;
         public static final int hourworld_logo_new=0x7f020089;
         public static final int hourworld_logo_new_500=0x7f02008a;
-        public static final int hourworld_rounded_logo_sm=0x7f02008b;
-        public static final int hw_new_logo_sm=0x7f02008c;
-        public static final int ic_action_accounts=0x7f02008d;
-        public static final int ic_action_direction=0x7f02008e;
-        public static final int ic_action_edit=0x7f02008f;
-        public static final int ic_action_email=0x7f020090;
-        public static final int ic_action_help=0x7f020091;
-        public static final int ic_action_location_found=0x7f020092;
-        public static final int ic_action_new=0x7f020093;
-        public static final int ic_action_overflow=0x7f020094;
-        public static final int ic_action_place=0x7f020095;
-        public static final int ic_action_refresh=0x7f020096;
-        public static final int ic_action_remove=0x7f020097;
-        public static final int ic_action_reply=0x7f020098;
-        public static final int ic_action_search=0x7f020099;
-        public static final int ic_action_send_now=0x7f02009a;
-        public static final int ic_launcher=0x7f02009b;
-        public static final int ic_plusone_medium_off_client=0x7f02009c;
-        public static final int ic_plusone_small_off_client=0x7f02009d;
-        public static final int ic_plusone_standard_off_client=0x7f02009e;
-        public static final int ic_plusone_tall_off_client=0x7f02009f;
-        public static final int imageview_border=0x7f0200a0;
-        public static final int in_a_day=0x7f0200a1;
-        public static final int in_a_week=0x7f0200a2;
-        public static final int in_three_days=0x7f0200a3;
-        public static final int left_shadow=0x7f0200a4;
-        public static final int lightgray=0x7f0200d0;
-        public static final int like_icon_default=0x7f0200a5;
-        public static final int like_icon_handler=0x7f0200a6;
-        public static final int like_icon_pressed=0x7f0200a7;
-        public static final int loading_image=0x7f0200a8;
-        public static final int map_icon_default=0x7f0200a9;
-        public static final int map_marker_unselected=0x7f0200aa;
-        public static final int minus_icon=0x7f0200ab;
-        public static final int mm_20_blue=0x7f0200ac;
-        public static final int mm_20_red=0x7f0200ad;
-        public static final int more=0x7f0200ae;
-        public static final int news=0x7f0200af;
-        public static final int no_image_icon=0x7f0200b0;
-        public static final int offers=0x7f0200b1;
-        public static final int plus=0x7f0200b2;
-        public static final int plus_icon=0x7f0200b3;
-        public static final int popup=0x7f0200b4;
-        public static final int profile=0x7f0200b5;
-        public static final int quickaction_arrow_down=0x7f0200b6;
-        public static final int quickaction_arrow_up=0x7f0200b7;
-        public static final int quickaction_background=0x7f0200b8;
-        public static final int quickaction_bottom_frame=0x7f0200b9;
-        public static final int quickaction_slider_btn=0x7f0200ba;
-        public static final int quickaction_slider_btn_normal=0x7f0200bb;
-        public static final int quickaction_slider_btn_on=0x7f0200bc;
-        public static final int quickaction_slider_btn_pressed=0x7f0200bd;
-        public static final int quickaction_slider_btn_selected=0x7f0200be;
-        public static final int quickaction_slider_grip_left=0x7f0200bf;
-        public static final int quickaction_slider_grip_right=0x7f0200c0;
-        public static final int quickaction_top_frame=0x7f0200c1;
-        public static final int quickcontact_drop_shadow=0x7f0200c2;
-        public static final int refresh=0x7f0200c3;
-        public static final int refresh_icon_default=0x7f0200c4;
-        public static final int refresh_icon_handler=0x7f0200c5;
-        public static final int refresh_icon_pressed=0x7f0200c6;
-        public static final int requests=0x7f0200c7;
-        public static final int right_shadow=0x7f0200c8;
-        public static final int roundedcorner=0x7f0200c9;
-        public static final int roundedcorner_white=0x7f0200ca;
-        public static final int search=0x7f0200cb;
-        public static final int slider_back=0x7f0200cc;
-        public static final int statement=0x7f0200cd;
-        public static final int stopred=0x7f0200d7;
-        public static final int tan=0x7f0200d4;
-        public static final int white=0x7f0200cf;
-        public static final int who_checkin_default=0x7f0200ce;
+        public static final int hourworld_logo_new_60_60=0x7f02008b;
+        public static final int hourworld_rounded_logo_sm=0x7f02008c;
+        public static final int hw_new_logo_sm=0x7f02008d;
+        public static final int ic_action_accounts=0x7f02008e;
+        public static final int ic_action_chat=0x7f02008f;
+        public static final int ic_action_direction=0x7f020090;
+        public static final int ic_action_edit=0x7f020091;
+        public static final int ic_action_email=0x7f020092;
+        public static final int ic_action_help=0x7f020093;
+        public static final int ic_action_location_found=0x7f020094;
+        public static final int ic_action_new=0x7f020095;
+        public static final int ic_action_overflow=0x7f020096;
+        public static final int ic_action_place=0x7f020097;
+        public static final int ic_action_refresh=0x7f020098;
+        public static final int ic_action_remove=0x7f020099;
+        public static final int ic_action_reply=0x7f02009a;
+        public static final int ic_action_search=0x7f02009b;
+        public static final int ic_action_send_now=0x7f02009c;
+        public static final int ic_launcher=0x7f02009d;
+        public static final int ic_plusone_medium_off_client=0x7f02009e;
+        public static final int ic_plusone_small_off_client=0x7f02009f;
+        public static final int ic_plusone_standard_off_client=0x7f0200a0;
+        public static final int ic_plusone_tall_off_client=0x7f0200a1;
+        public static final int imageview_border=0x7f0200a2;
+        public static final int in_a_day=0x7f0200a3;
+        public static final int in_a_week=0x7f0200a4;
+        public static final int in_three_days=0x7f0200a5;
+        public static final int left_shadow=0x7f0200a6;
+        public static final int lightgray=0x7f0200d2;
+        public static final int like_icon_default=0x7f0200a7;
+        public static final int like_icon_handler=0x7f0200a8;
+        public static final int like_icon_pressed=0x7f0200a9;
+        public static final int loading_image=0x7f0200aa;
+        public static final int map_icon_default=0x7f0200ab;
+        public static final int map_marker_unselected=0x7f0200ac;
+        public static final int minus_icon=0x7f0200ad;
+        public static final int mm_20_blue=0x7f0200ae;
+        public static final int mm_20_red=0x7f0200af;
+        public static final int more=0x7f0200b0;
+        public static final int news=0x7f0200b1;
+        public static final int no_image_icon=0x7f0200b2;
+        public static final int offers=0x7f0200b3;
+        public static final int plus=0x7f0200b4;
+        public static final int plus_icon=0x7f0200b5;
+        public static final int popup=0x7f0200b6;
+        public static final int profile=0x7f0200b7;
+        public static final int quickaction_arrow_down=0x7f0200b8;
+        public static final int quickaction_arrow_up=0x7f0200b9;
+        public static final int quickaction_background=0x7f0200ba;
+        public static final int quickaction_bottom_frame=0x7f0200bb;
+        public static final int quickaction_slider_btn=0x7f0200bc;
+        public static final int quickaction_slider_btn_normal=0x7f0200bd;
+        public static final int quickaction_slider_btn_on=0x7f0200be;
+        public static final int quickaction_slider_btn_pressed=0x7f0200bf;
+        public static final int quickaction_slider_btn_selected=0x7f0200c0;
+        public static final int quickaction_slider_grip_left=0x7f0200c1;
+        public static final int quickaction_slider_grip_right=0x7f0200c2;
+        public static final int quickaction_top_frame=0x7f0200c3;
+        public static final int quickcontact_drop_shadow=0x7f0200c4;
+        public static final int refresh=0x7f0200c5;
+        public static final int refresh_icon_default=0x7f0200c6;
+        public static final int refresh_icon_handler=0x7f0200c7;
+        public static final int refresh_icon_pressed=0x7f0200c8;
+        public static final int requests=0x7f0200c9;
+        public static final int right_shadow=0x7f0200ca;
+        public static final int roundedcorner=0x7f0200cb;
+        public static final int roundedcorner_white=0x7f0200cc;
+        public static final int search=0x7f0200cd;
+        public static final int slider_back=0x7f0200ce;
+        public static final int statement=0x7f0200cf;
+        public static final int stopred=0x7f0200d9;
+        public static final int tan=0x7f0200d6;
+        public static final int white=0x7f0200d1;
+        public static final int who_checkin_default=0x7f0200d0;
     }
     public static final class id {
         public static final int about_button=0x7f0600b3;
@@ -1388,7 +1390,7 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f060026;
         public static final int action_bar_title=0x7f060025;
         public static final int action_context_bar=0x7f060020;
-        public static final int action_edit=0x7f060154;
+        public static final int action_edit=0x7f060155;
         public static final int action_email=0x7f06014d;
         public static final int action_help=0x7f060149;
         public static final int action_menu_divider=0x7f060016;
@@ -1397,11 +1399,12 @@ containing a value of this type.
         public static final int action_more=0x7f06014b;
         public static final int action_new=0x7f060148;
         public static final int action_refresh=0x7f060147;
-        public static final int action_remove=0x7f06014e;
+        public static final int action_remove=0x7f06014f;
         public static final int action_reply=0x7f06014a;
         public static final int action_report=0x7f06014c;
         public static final int action_search=0x7f060146;
-        public static final int action_send_now=0x7f060153;
+        public static final int action_send_now=0x7f060154;
+        public static final int action_text=0x7f06014e;
         public static final int activity=0x7f0600df;
         public static final int activity_chooser_view_content=0x7f060028;
         public static final int activity_layout=0x7f060078;
@@ -1456,7 +1459,7 @@ containing a value of this type.
         public static final int cat_service_layout=0x7f060093;
         public static final int category=0x7f06006e;
         public static final int category_btn=0x7f06012e;
-        public static final int check_messages=0x7f060151;
+        public static final int check_messages=0x7f060152;
         public static final int checkbox=0x7f060030;
         public static final int city=0x7f060101;
         public static final int civicinity_logo=0x7f06013e;
@@ -1467,7 +1470,7 @@ containing a value of this type.
         public static final int contact_info=0x7f06010d;
         public static final int contact_layout=0x7f06007a;
         public static final int contact_type=0x7f06010b;
-        public static final int create_group=0x7f060150;
+        public static final int create_group=0x7f060151;
         public static final int create_groups=0x7f06008c;
         public static final int customdialog=0x7f06013d;
         public static final int date=0x7f060129;
@@ -1548,7 +1551,7 @@ containing a value of this type.
         public static final int login_button=0x7f0600b0;
         public static final int login_interact_area=0x7f0600aa;
         public static final int login_layout=0x7f0600ad;
-        public static final int logout=0x7f060152;
+        public static final int logout=0x7f060153;
         public static final int lower=0x7f0600a2;
         public static final int main_layout=0x7f060076;
         public static final int main_view=0x7f0600fc;
@@ -1648,7 +1651,7 @@ containing a value of this type.
         public static final int search_close_btn=0x7f06003b;
         public static final int search_edit_frame=0x7f060037;
         public static final int search_go_btn=0x7f06003d;
-        public static final int search_group=0x7f06014f;
+        public static final int search_group=0x7f060150;
         public static final int search_layout=0x7f06011f;
         public static final int search_mag_icon=0x7f060038;
         public static final int search_plate=0x7f060039;
@@ -1899,27 +1902,28 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
-        public static final int about_hourworld=0x7f0b0035;
-        public static final int action_check_updates=0x7f0b0042;
-        public static final int action_contacts=0x7f0b0040;
-        public static final int action_edit=0x7f0b0048;
-        public static final int action_email=0x7f0b004a;
-        public static final int action_help=0x7f0b0041;
-        public static final int action_location_found=0x7f0b003e;
-        public static final int action_more=0x7f0b0049;
-        public static final int action_new=0x7f0b0043;
-        public static final int action_refresh=0x7f0b003f;
-        public static final int action_remove=0x7f0b0046;
-        public static final int action_reply=0x7f0b0047;
-        public static final int action_report=0x7f0b0045;
+        public static final int about_hourworld=0x7f0b0036;
+        public static final int action_check_updates=0x7f0b0043;
+        public static final int action_contacts=0x7f0b0041;
+        public static final int action_edit=0x7f0b0049;
+        public static final int action_email=0x7f0b004b;
+        public static final int action_help=0x7f0b0042;
+        public static final int action_location_found=0x7f0b003f;
+        public static final int action_more=0x7f0b004a;
+        public static final int action_new=0x7f0b0044;
+        public static final int action_refresh=0x7f0b0040;
+        public static final int action_remove=0x7f0b0047;
+        public static final int action_reply=0x7f0b0048;
+        public static final int action_report=0x7f0b0046;
         /**  Action Bar action items 
          */
-        public static final int action_search=0x7f0b003d;
-        public static final int action_send_now=0x7f0b0044;
-        public static final int add_date=0x7f0b0061;
+        public static final int action_search=0x7f0b003e;
+        public static final int action_send_now=0x7f0b0045;
+        public static final int action_text=0x7f0b004c;
+        public static final int add_date=0x7f0b0063;
         /**  main texts 
          */
-        public static final int announcements=0x7f0b0036;
+        public static final int announcements=0x7f0b0037;
         public static final int app_name=0x7f0b0028;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
@@ -1944,15 +1948,23 @@ containing a value of this type.
         [CHAR LIMIT=70] 
          */
         public static final int auth_client_using_bad_version_title=0x7f0b0021;
-        public static final int badge_1=0x7f0b0054;
-        public static final int badge_2=0x7f0b0055;
-        public static final int badge_3=0x7f0b0056;
-        public static final int badge_4=0x7f0b0057;
-        public static final int badge_5=0x7f0b0058;
-        public static final int badge_6=0x7f0b0059;
-        public static final int badges=0x7f0b0053;
-        public static final int check_for_updates=0x7f0b002d;
-        public static final int check_messages=0x7f0b004f;
+        public static final int badge_1=0x7f0b0056;
+        public static final int badge_2=0x7f0b0057;
+        public static final int badge_3=0x7f0b0058;
+        public static final int badge_4=0x7f0b0059;
+        public static final int badge_5=0x7f0b005a;
+        public static final int badge_6=0x7f0b005b;
+        public static final int badges=0x7f0b0055;
+        public static final int check_for_updates=0x7f0b002e;
+        public static final int check_messages=0x7f0b0051;
+        /** 
+  This file is automatically generated by Crashlytics to uniquely 
+  identify individual builds of your Android application.
+
+  Do NOT modify, delete, or commit to source control!
+
+         */
+        public static final int com_crashlytics_android_build_id=0x7f0b002a;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
@@ -2024,30 +2036,31 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f0b0020;
-        public static final int completed_date=0x7f0b0060;
-        public static final int contact_list_prompt=0x7f0b0071;
-        public static final int create_group=0x7f0b0050;
-        public static final int dateSliderTitle=0x7f0b002a;
-        public static final int email=0x7f0b0031;
+        public static final int completed_date=0x7f0b0062;
+        public static final int contact_list_prompt=0x7f0b0074;
+        public static final int content_description=0x7f0b006a;
+        public static final int create_group=0x7f0b0052;
+        public static final int dateSliderTitle=0x7f0b002b;
+        public static final int email=0x7f0b0032;
         /** Replace placeholder ID with your tracking ID
          */
         public static final int ga_trackingId=0x7f0b0029;
-        public static final int groups=0x7f0b003a;
+        public static final int groups=0x7f0b003b;
         public static final int hello=0x7f0b0027;
-        public static final int hour_prompt=0x7f0b006e;
-        public static final int hours=0x7f0b003b;
-        public static final int hourworld=0x7f0b002e;
-        public static final int hourworld_statement=0x7f0b002f;
-        public static final int join_hourworld=0x7f0b0034;
-        public static final int leave_a_note=0x7f0b0062;
-        public static final int loading_title=0x7f0b0065;
-        public static final int login=0x7f0b0033;
-        public static final int logout=0x7f0b0052;
-        public static final int mapKey=0x7f0b006c;
+        public static final int hour_prompt=0x7f0b0071;
+        public static final int hours=0x7f0b003c;
+        public static final int hourworld=0x7f0b002f;
+        public static final int hourworld_statement=0x7f0b0030;
+        public static final int join_hourworld=0x7f0b0035;
+        public static final int leave_a_note=0x7f0b0064;
+        public static final int loading_title=0x7f0b0067;
+        public static final int login=0x7f0b0034;
+        public static final int logout=0x7f0b0054;
+        public static final int mapKey=0x7f0b006f;
         /** new key! (09162014) AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw 
  <string name="mapKeyDeveloper3">0s7Km0gbaIiLTFNd22M3EVS_xWeuOhPmeDhOlmA</string> 
          */
-        public static final int mapKey2=0x7f0b006b;
+        public static final int mapKey2=0x7f0b006e;
         /**  mtb_profile 
     <string name=""></string>
     <string name=""></string>
@@ -2071,35 +2084,35 @@ containing a value of this type.
  MapKey 
  note: I removed the developer keys. You should generate it on your own 
          */
-        public static final int mapKeyDeveloper=0x7f0b0068;
-        public static final int mapKeyDeveloper2=0x7f0b0069;
-        public static final int mapKeyDeveloper3=0x7f0b006a;
-        public static final int menu=0x7f0b004c;
-        public static final int more=0x7f0b003c;
-        public static final int my_location=0x7f0b002b;
-        public static final int name=0x7f0b0067;
-        public static final int no=0x7f0b005b;
-        public static final int offers=0x7f0b0037;
-        public static final int password=0x7f0b0032;
-        public static final int pick_a_member=0x7f0b005d;
-        public static final int pick_cat_service=0x7f0b005e;
-        public static final int promo_text=0x7f0b0030;
-        public static final int reference_text=0x7f0b0064;
-        public static final int report_hours=0x7f0b005c;
-        public static final int request_offer_expiration_prompt=0x7f0b0070;
-        public static final int requests=0x7f0b0038;
-        public static final int satellite_view=0x7f0b002c;
-        public static final int satisfaction_text=0x7f0b0063;
-        public static final int search=0x7f0b0039;
-        public static final int search_group=0x7f0b0051;
-        public static final int search_hint=0x7f0b004b;
-        public static final int search_prompt=0x7f0b006d;
-        public static final int task_description=0x7f0b005f;
-        public static final int title=0x7f0b0066;
-        public static final int two_arrows=0x7f0b004d;
-        public static final int type_a_search_term=0x7f0b004e;
-        public static final int xdays_prompt=0x7f0b006f;
-        public static final int yes=0x7f0b005a;
+        public static final int mapKeyDeveloper=0x7f0b006b;
+        public static final int mapKeyDeveloper2=0x7f0b006c;
+        public static final int mapKeyDeveloper3=0x7f0b006d;
+        public static final int menu=0x7f0b004e;
+        public static final int more=0x7f0b003d;
+        public static final int my_location=0x7f0b002c;
+        public static final int name=0x7f0b0069;
+        public static final int no=0x7f0b005d;
+        public static final int offers=0x7f0b0038;
+        public static final int password=0x7f0b0033;
+        public static final int pick_a_member=0x7f0b005f;
+        public static final int pick_cat_service=0x7f0b0060;
+        public static final int promo_text=0x7f0b0031;
+        public static final int reference_text=0x7f0b0066;
+        public static final int report_hours=0x7f0b005e;
+        public static final int request_offer_expiration_prompt=0x7f0b0073;
+        public static final int requests=0x7f0b0039;
+        public static final int satellite_view=0x7f0b002d;
+        public static final int satisfaction_text=0x7f0b0065;
+        public static final int search=0x7f0b003a;
+        public static final int search_group=0x7f0b0053;
+        public static final int search_hint=0x7f0b004d;
+        public static final int search_prompt=0x7f0b0070;
+        public static final int task_description=0x7f0b0061;
+        public static final int title=0x7f0b0068;
+        public static final int two_arrows=0x7f0b004f;
+        public static final int type_a_search_term=0x7f0b0050;
+        public static final int xdays_prompt=0x7f0b0072;
+        public static final int yes=0x7f0b005c;
     }
     public static final class style {
         /**  

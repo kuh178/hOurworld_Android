@@ -94,19 +94,13 @@ public class MTBLoginPage extends Activity {
 				
 				if(mEmail.equals("") || mPassword.equals("")){
 					Toast.makeText(MTBLoginPage.this, "Username and/or password not recognized. Please check and try again.", Toast.LENGTH_SHORT).show();	
-				}else{
-					
-					
+				}
+				else{
 					MTBStringHash mHash = new MTBStringHash();
 					
 					mChallenge = mHash.createChallenge();
-					Log.i("K", "mChallenge : " + mChallenge);
-					
 					String passwordMD5 = mHash.md5(mPassword);
-					Log.i("K", "passwordMD5 : " + passwordMD5);
-					
 					mMixedMD5 = mHash.md5(mChallenge + passwordMD5);
-					Log.i("K", "mMixedMD5 : " + mMixedMD5);
 					
 					new AsyncLogin().execute();
 				}
@@ -165,7 +159,9 @@ public class MTBLoginPage extends Activity {
 		
 		protected void onPreExecute() {
 			mDialog = ProgressDialog.show(MTBLoginPage.this, "Loading...", "Logging into hOurworld...", true);
+			mDialog.setCanceledOnTouchOutside(true);
 		}
+		
 		@Override
 		protected Void doInBackground(Void... arg0) {
 			
@@ -182,6 +178,10 @@ public class MTBLoginPage extends Activity {
 		    	entity.addPart("username", new StringBody(mEmail));
 		    	entity.addPart("challenge", new StringBody(mChallenge));
 		    	entity.addPart("response", new StringBody(mMixedMD5));
+		    	
+		    	Log.i("K", "mEmail : " + mEmail);
+		    	Log.i("K", "mChallenge : " + mChallenge);
+				Log.i("K", "mMixedMD5 : " + mMixedMD5);
 	        	
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();

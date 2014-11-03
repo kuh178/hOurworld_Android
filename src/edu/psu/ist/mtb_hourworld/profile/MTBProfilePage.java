@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.util.ArrayList;
 
 import org.apache.http.HttpResponse;
@@ -20,11 +19,9 @@ import org.json.JSONObject;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
-import edu.psu.ist.mtb_hourworld.MTBOfferPage;
 import edu.psu.ist.mtb_hourworld.R;
 import edu.psu.ist.mtb_hourworld.account.MTBLoginPage;
 import edu.psu.ist.mtb_hourworld.constants.Constants;
-import edu.psu.ist.mtb_hourworld.items.MTBItems;
 import edu.psu.ist.mtb_hourworld.items.MTBTaskItems;
 import edu.psu.ist.mtb_hourworld.tasks.MTBReportHoursPage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBTaskDetailPage;
@@ -39,7 +36,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -231,11 +227,9 @@ public class MTBProfilePage extends Activity {
 	    	
 	    	vReportHourBtn.setText("Logout");
 	    	vReportHourBtn.setOnClickListener(new View.OnClickListener() {
-				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					
 				}
 			});
 	    	
@@ -248,7 +242,6 @@ public class MTBProfilePage extends Activity {
 	    	
 	    	messageBtn.setText("Show profile updates");
 	    	messageBtn.setOnClickListener(new View.OnClickListener() {
-				
 				@Override
 				public void onClick(View v) {
 					
@@ -275,7 +268,6 @@ public class MTBProfilePage extends Activity {
 					
 					// when contact edit btn clicked
 					vContactEditBtn.setOnClickListener(new View.OnClickListener() {
-						
 						@Override
 						public void onClick(View v) {
 							
@@ -287,7 +279,6 @@ public class MTBProfilePage extends Activity {
 					
 					// when address edit btn clicked
 					vAddressEditBtn.setOnClickListener(new View.OnClickListener() {
-						
 						@Override
 						public void onClick(View v) {
 							
@@ -299,7 +290,6 @@ public class MTBProfilePage extends Activity {
 					
 					// when bio edit btn clicked
 					vBioEditBtn.setOnClickListener(new View.OnClickListener() {
-						
 						@Override
 						public void onClick(View v) {
 							
@@ -312,7 +302,6 @@ public class MTBProfilePage extends Activity {
 					
 					// when group edit btn clicked
 					vGroupEditBtn.setOnClickListener(new View.OnClickListener() {
-						
 						@Override
 						public void onClick(View v) {
 							
@@ -329,7 +318,6 @@ public class MTBProfilePage extends Activity {
 	    	vReportHourBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
 					// show a dialog for confirmation
 					new AlertDialog.Builder(MTBProfilePage.this)
 					.setTitle("Message")

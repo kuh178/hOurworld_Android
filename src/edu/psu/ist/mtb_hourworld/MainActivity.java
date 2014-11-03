@@ -12,6 +12,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.analytics.tracking.android.EasyTracker;
 
 import edu.psu.ist.mtb_hourworld.account.MTBLoginPage;
@@ -97,6 +98,9 @@ public class MainActivity extends Activity {
         SharedPreferences.Editor editor = mPref.edit();
 		editor.putString("android_id", android_id);
 		editor.commit();
+		
+		// crashlytics
+		Crashlytics.start(this);
         
 		// get the version from the server.
 		new versionTest().execute();
@@ -269,7 +273,7 @@ public class MainActivity extends Activity {
 				checkGpsIsOn();
 				//startActivity();
 				
-				if(dialog.isShowing()) {
+				if(!dialog.equals(null) && dialog.isShowing()) {
 					dialog.dismiss();
 				}
 			}

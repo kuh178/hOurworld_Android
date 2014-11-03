@@ -12,6 +12,8 @@
 		android:scaleType="fitXY"
 		android:src="@drawable/hourworld_icon_30_30"
 		android:id="@+id/civicinity_logo"
+		android:contentDescription="@string/content_description"
+		android:visibility="gone"
 		/>
     
 	<ProgressBar

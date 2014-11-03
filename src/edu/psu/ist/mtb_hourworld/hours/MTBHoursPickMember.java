@@ -103,8 +103,14 @@ public class MTBHoursPickMember extends Activity {
 
 	        @Override
 	        public boolean onQueryTextChange(String text) {
-	        	mAdapter.getFilter().filter(text);
-	            return true;
+	        	
+	        	if(!mAdapter.equals(null)) {
+	        		mAdapter.getFilter().filter(text);
+		            return true;
+	        	}
+	        	else{
+	        		return false;
+	        	}
 	        }
 	    });
 

@@ -45,7 +45,7 @@ public class MTBImageLoader {
             cacheDir.mkdirs();
     }
     
-    final int stub_id = R.drawable.hourworld_rounded_logo_sm;
+    final int stub_id = R.drawable.hourworld_logo_new_60_60;
     public void DisplayImage(String url, Context context, ImageView imageView)
     {
     	Log.i("K", "url : " + url);

@@ -16,19 +16,11 @@ import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
-
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
 import edu.psu.ist.mtb_hourworld.account.MTBLoginPage;
 import edu.psu.ist.mtb_hourworld.constants.Constants;
-import edu.psu.ist.mtb_hourworld.group.MTBGroupMainPage;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
-import edu.psu.ist.mtb_hourworld.tasks.MTBReportHoursPage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBTaskCategory;
-import edu.psu.ist.mtb_hourworld.tasks.MTBTaskDetailPage;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;

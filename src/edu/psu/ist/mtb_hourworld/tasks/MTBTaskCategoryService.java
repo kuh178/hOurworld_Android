@@ -133,7 +133,7 @@ public class MTBTaskCategoryService extends Activity {
 		    
 		    try {
 		    	if(mIsOffer.equals("T")) {
-		    		entity.addPart("requestType", new StringBody("RequestCatsC," + mSvcCatID)); // specify a type of this request
+		    		entity.addPart("requestType", new StringBody("OfferCatsC," + mSvcCatID)); // specify a type of this request
 		    	}
 		    	else {
 		    		entity.addPart("requestType", new StringBody("RequestCatsC," + mSvcCatID)); // specify a type of this request

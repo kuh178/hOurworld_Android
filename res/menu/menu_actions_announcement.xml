@@ -25,6 +25,12 @@
 		          android:title="@string/action_email"
 		          android:showAsAction="ifRoom|withText" />
 		    
+		    <!-- Text -->
+		    <item android:id="@+id/action_text"
+		          android:icon="@drawable/ic_action_chat"
+		          android:title="@string/action_text"
+		          android:showAsAction="ifRoom|withText" />
+		    
 		    <!-- Remove -->
 		    <item android:id="@+id/action_remove"
 		          android:icon="@drawable/ic_action_remove"

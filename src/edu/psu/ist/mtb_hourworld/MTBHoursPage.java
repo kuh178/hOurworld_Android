@@ -472,15 +472,21 @@ public class MTBHoursPage extends Activity {
 			 
 		 } // PICKCATSERVICE
 		 else {
-			 mSvcCat = data.getStringExtra("SvcCat");
-			 mService = data.getStringExtra("Service");
-			 mSvcCatID = data.getIntExtra("SvcCatID", 0);
-			 mSvcID = data.getIntExtra("SvcID", 0);
 			 
-			 Log.i("K", "SvcCat: " + mSvcCat + " Service: " + mService + " SvcCatID: " + mSvcCatID + " SvcID: " + mSvcID);
-			 
-			 if(mSvcCatID != 0 && mSvcID != 0) {
-				 vCatServiceBtn.setText(mSvcCat + " > " + mService);
+			 if(!data.equals(null)) {
+				 mSvcCat = data.getStringExtra("SvcCat");
+				 mService = data.getStringExtra("Service");
+				 mSvcCatID = data.getIntExtra("SvcCatID", 0);
+				 mSvcID = data.getIntExtra("SvcID", 0);
+				 
+				 Log.i("K", "SvcCat: " + mSvcCat + " Service: " + mService + " SvcCatID: " + mSvcCatID + " SvcID: " + mSvcID);
+				 
+				 if(mSvcCatID != 0 && mSvcID != 0) {
+					 vCatServiceBtn.setText(mSvcCat + " > " + mService);
+				 }
+			 }
+			 else {
+				 Toast.makeText(MTBHoursPage.this, "Error occurred", Toast.LENGTH_SHORT).show();
 			 }
 		 }
 	 }

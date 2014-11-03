@@ -26,6 +26,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -110,6 +111,8 @@ public class MTBTaskDetailPage extends FragmentActivity {
 	    mService = gIntent.getExtras().getString("Service");
 	    mLatitude = gIntent.getExtras().getDouble("latitude");
 	    mLongitude = gIntent.getExtras().getDouble("longitude");
+	    
+	    Log.i("K", "mPhoneNumber : " + mPhoneNumber);
 	    
 	    mOLat = gIntent.getExtras().getDouble("oLat");
 	    mOLon = gIntent.getExtras().getDouble("oLon");
@@ -477,10 +480,14 @@ public class MTBTaskDetailPage extends FragmentActivity {
             // report action
         	report();
             return true;
-        case R.id.action_reply:
+        case R.id.action_email:
             // reply action
-        	reply();
+        	email();
             return true;
+        case R.id.action_text:
+        	// text action
+        	text();
+        	return true;
         case R.id.action_remove:
             // remove action
         	remove();
@@ -534,12 +541,23 @@ public class MTBTaskDetailPage extends FragmentActivity {
 		.show();
     }
     
-    public void reply() {
+    
+    public void email() {
     	Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
 		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Service inquiry");
 		emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
 		startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
     }
+    
+    public void text() {
+		
+		if(!mPhoneNumber.equals(null) && !mPhoneNumber.equals("false") && mPhoneNumber.length() >= 7) {
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", mPhoneNumber, null)));
+		}
+		else {
+			Toast.makeText(MTBTaskDetailPage.this, "No phone number provided by this member", Toast.LENGTH_SHORT).show();
+		}
+	}
     
     public void remove() {
     	if(mMemID == mPref.getInt("memID", 0)) {

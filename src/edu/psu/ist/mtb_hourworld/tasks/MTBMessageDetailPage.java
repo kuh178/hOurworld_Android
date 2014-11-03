@@ -445,6 +445,10 @@ public class MTBMessageDetailPage extends FragmentActivity {
             // email action
         	email();
             return true;
+        case R.id.action_text:
+        	// text action
+        	text();
+        	return true;
         case R.id.action_remove:
             // remove action
         	remove();
@@ -527,10 +531,23 @@ public class MTBMessageDetailPage extends FragmentActivity {
 	}
 	
 	public void email() {
-		Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email " + mUsername);
-		emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
-		startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
+		
+		if(mEmailAddress != null) {
+			Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
+			emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email " + mUsername);
+			emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
+			startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
+		}
+	}
+	
+	public void text() {
+		
+		if(!mPhoneNumber.equals(null) && !mPhoneNumber.equals("false") && mPhoneNumber.length() >= 7) {
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", mPhoneNumber, null)));
+		}
+		else {
+			Toast.makeText(MTBMessageDetailPage.this, "No phone number provided by this member", Toast.LENGTH_SHORT).show();
+		}
 	}
 	
 	public void remove() {
