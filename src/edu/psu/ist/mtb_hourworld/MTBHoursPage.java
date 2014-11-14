@@ -462,31 +462,48 @@ public class MTBHoursPage extends Activity {
 		 
 		 if(resultCode == PICKMEMBER){
 			 //mOLat = data.getDoubleExtra("olatitude", 0.0);
-			 mUserID = data.getIntExtra("memID", 0);
 			 
-			 if(mUserID != 0) {
-				 vMemberBtn.setText(data.getStringExtra("memName"));
+			 try {
+				 mUserID = data.getIntExtra("memID", 0);
 				 
-				 Log.i("K", "memID : " + mUserID + ", memName: " + data.getStringExtra("memName").toString());
+				 if(mUserID != 0) {
+					 vMemberBtn.setText(data.getStringExtra("memName"));
+					 
+					 Log.i("K", "memID : " + mUserID + ", memName: " + data.getStringExtra("memName").toString());
+				 }
+				 else {
+					 Toast.makeText(MTBHoursPage.this, "Make sure you picked a member", Toast.LENGTH_SHORT).show();
+				 }
 			 }
+			 catch(Exception e) {
+				 Toast.makeText(MTBHoursPage.this, "Make sure you picked a member", Toast.LENGTH_SHORT).show();
+			 }
+			 
 			 
 		 } // PICKCATSERVICE
 		 else {
+			
+			 Log.i("K", "data : " + data);
 			 
-			 if(!data.equals(null)) {
-				 mSvcCat = data.getStringExtra("SvcCat");
-				 mService = data.getStringExtra("Service");
-				 mSvcCatID = data.getIntExtra("SvcCatID", 0);
-				 mSvcID = data.getIntExtra("SvcID", 0);
-				 
-				 Log.i("K", "SvcCat: " + mSvcCat + " Service: " + mService + " SvcCatID: " + mSvcCatID + " SvcID: " + mSvcID);
-				 
-				 if(mSvcCatID != 0 && mSvcID != 0) {
-					 vCatServiceBtn.setText(mSvcCat + " > " + mService);
+			 try {
+				 if(!data.equals(null)) {
+					 mSvcCat = data.getStringExtra("SvcCat");
+					 mService = data.getStringExtra("Service");
+					 mSvcCatID = data.getIntExtra("SvcCatID", 0);
+					 mSvcID = data.getIntExtra("SvcID", 0);
+					 
+					 Log.i("K", "SvcCat: " + mSvcCat + " Service: " + mService + " SvcCatID: " + mSvcCatID + " SvcID: " + mSvcID);
+					 
+					 if(mSvcCatID != 0 && mSvcID != 0) {
+						 vCatServiceBtn.setText(mSvcCat + " > " + mService);
+					 }
+				 }
+				 else {
+					 Toast.makeText(MTBHoursPage.this, "Make sure you picked a service", Toast.LENGTH_SHORT).show();
 				 }
 			 }
-			 else {
-				 Toast.makeText(MTBHoursPage.this, "Error occurred", Toast.LENGTH_SHORT).show();
+			 catch(Exception e) {
+				 Toast.makeText(MTBHoursPage.this, "Make sure you picked a service", Toast.LENGTH_SHORT).show();
 			 }
 		 }
 	 }

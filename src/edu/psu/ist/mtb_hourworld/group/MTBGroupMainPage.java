@@ -16,8 +16,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.korovyansk.android.slideout.SlideoutActivity;
-
 import edu.psu.ist.mtb_hourworld.MTBMessagePage;
 import edu.psu.ist.mtb_hourworld.MTBOfferPage;
 import edu.psu.ist.mtb_hourworld.MTBRequestPage;
@@ -30,7 +28,6 @@ import edu.psu.ist.mtb_hourworld.quickaction.ActionItem;
 import edu.psu.ist.mtb_hourworld.quickaction.QuickAction;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
-import edu.psu.ist.mtb_hourworld.sidebar.MTBSideBarActivity;
 import edu.psu.ist.mtb_hourworld.tasks.MTBAddMessagePage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBAddRequestOfferPage;
 import edu.psu.ist.mtb_hourworld.utilities.MTBUploadHandler;
@@ -464,21 +461,23 @@ public class MTBGroupMainPage extends ActivityGroup {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.search_group:
-            // new action
+        if(item.getItemId() == R.id.search_group) {
+        	// new action
         	searchGroup();
-            return true;
-        case R.id.create_group:
-            // new action
+        	return true;
+        }
+        else if(item.getItemId() == R.id.create_group) {
+        	// new action
         	createGroup();
-            return true;
-        case R.id.check_messages:
-            // new action
+        	return true;
+        }
+        else if(item.getItemId() == R.id.check_messages) {
+        	 // new action
         	checkMessages();
             return true;
-        default:
-            return super.onOptionsItemSelected(item);
+        }
+        else {
+        	return super.onOptionsItemSelected(item);
         }
     }
     

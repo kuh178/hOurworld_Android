@@ -432,28 +432,32 @@ public class MTBMessageDetailPage extends FragmentActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_reply:
+        //if(item.getItemId() == R.id.action_reply) {
             // reply action
-        	reply();
-            return true;
-        case R.id.action_report:
+        //	reply();
+        //    return true;
+        //}
+        if(item.getItemId() == R.id.action_report) {
             // report action
         	report();
             return true;
-        case R.id.action_email:
+        }
+        else if(item.getItemId() == R.id.action_email) {
             // email action
         	email();
             return true;
-        case R.id.action_text:
+        }
+        else if(item.getItemId() == R.id.action_text) {
         	// text action
         	text();
         	return true;
-        case R.id.action_remove:
+        }
+        else if(item.getItemId() == R.id.action_remove) {
             // remove action
         	remove();
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }

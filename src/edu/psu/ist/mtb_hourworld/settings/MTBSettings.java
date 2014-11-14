@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.android.gcm.GCMRegistrar;
-import com.korovyansk.android.slideout.SlideoutActivity;
+
 
 import edu.psu.ist.mtb_hourworld.MTBAboutPage;
 import edu.psu.ist.mtb_hourworld.MTBMainMenuPage;
@@ -20,7 +20,6 @@ import edu.psu.ist.mtb_hourworld.constants.Constants;
 import edu.psu.ist.mtb_hourworld.group.MTBGroupMainPage;
 import edu.psu.ist.mtb_hourworld.profile.MTBProfilePage;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
-import edu.psu.ist.mtb_hourworld.sidebar.MTBSideBarActivity;
 import edu.psu.ist.mtb_hourworld.utilities.MTBUploadHandler;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -77,29 +76,6 @@ public class MTBSettings extends Activity {
 
 	    mListView = (ListView)findViewById(R.id.listview);
 	    menuBtn = (Button)findViewById(R.id.menu_btn);
-	    
-	    // updated Jan. 22
-        menuBtn.setEnabled(false);
-        menuBtn.setVisibility(View.GONE);
-	    
-	    mMenuText = (TextView)findViewById(R.id.menu_text);
-	    
-	    mMenuText.setText(" More menus");
-	    
-	    menuBtn.setOnClickListener(
-				new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						int width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
-						SlideoutActivity.prepare(MTBSettings.this, R.id.inner_content, width);
-						
-						Intent intent = new Intent(MTBSettings.this, MTBSideBarActivity.class);
-						intent.putExtra("from", Constants.FROM_SETTINGS);
-						
-						startActivityForResult(intent, 2);
-						overridePendingTransition(0, 0);
-					}
-				});
 	    
 	    SettingItem sItem = new SettingItem();
 	    //sItem.name = "Clear cache";

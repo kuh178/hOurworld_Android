@@ -17,7 +17,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.korovyansk.android.slideout.SlideoutActivity;
 
 import edu.psu.ist.mtb_hourworld.MTBOfferPage.downloadTBRequestAndOffer;
 import edu.psu.ist.mtb_hourworld.R.color;
@@ -28,7 +27,6 @@ import edu.psu.ist.mtb_hourworld.group.MTBGroupMainPage;
 import edu.psu.ist.mtb_hourworld.items.MTBTaskItems;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
-import edu.psu.ist.mtb_hourworld.sidebar.MTBSideBarActivity;
 import edu.psu.ist.mtb_hourworld.tasks.MTBAddMessagePage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBAddRequestOfferPage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBMessageDetailPage;
@@ -446,16 +444,17 @@ public class MTBMessagePage extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_refresh:
+        if(item.getItemId() == R.id.action_refresh) {
             // refresh
         	refresh();
             return true;
-        case R.id.action_new:
+        }
+        else if(item.getItemId() == R.id.action_new) {
             // new action
         	add();
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }

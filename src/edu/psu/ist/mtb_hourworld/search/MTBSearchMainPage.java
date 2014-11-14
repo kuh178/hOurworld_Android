@@ -17,7 +17,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.korovyansk.android.slideout.SlideoutActivity;
 
 import edu.psu.ist.mtb_hourworld.MTBMessagePage;
 import edu.psu.ist.mtb_hourworld.MTBOfferPage;
@@ -29,7 +28,6 @@ import edu.psu.ist.mtb_hourworld.constants.Constants;
 import edu.psu.ist.mtb_hourworld.group.MTBGroupMainPage;
 import edu.psu.ist.mtb_hourworld.items.MTBTaskItems;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
-import edu.psu.ist.mtb_hourworld.sidebar.MTBSideBarActivity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -137,20 +135,6 @@ public class MTBSearchMainPage extends Activity {
 				return false;
 			}
 		});
-	    
-	    menuBtn.setOnClickListener(
-    		new View.OnClickListener() {
-    			@Override
-    			public void onClick(View v) {
-    				int width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
-    				SlideoutActivity.prepare(MTBSearchMainPage.this, R.id.inner_content, width);
-    					
-    				Intent intent = new Intent(MTBSearchMainPage.this, MTBSideBarActivity.class);
-    				intent.putExtra("from", Constants.FROM_SEARCH);
-    				startActivityForResult(intent, 2);
-    				overridePendingTransition(0, 0);
-    			}
-    		});
 	}
 	
 	@Override

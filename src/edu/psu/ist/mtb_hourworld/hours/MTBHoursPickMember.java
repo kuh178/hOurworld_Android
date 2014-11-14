@@ -256,11 +256,11 @@ public class MTBHoursPickMember extends Activity {
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_search:
+        if(item.getItemId() == R.id.action_search) {
             // search action
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }

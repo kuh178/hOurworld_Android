@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.psu.ist.mtb_hourworld"
-    android:versionCode="29"
-    android:versionName="1.1.5" >
+    android:versionCode="32"
+    android:versionName="1.1.8" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -10,6 +10,7 @@
     
     <uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 	<!--  If you are using both NETWORK_PROVIDER and GPS_PROVIDER, 
 	then you need to request only the ACCESS_FINE_LOCATION permission, 
 	because it includes permission for both providers. 

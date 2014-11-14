@@ -19,7 +19,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.korovyansk.android.slideout.SlideoutActivity;
 
 import edu.psu.ist.mtb_hourworld.adapter.MTBNewTaskAdapter;
 import edu.psu.ist.mtb_hourworld.constants.Constants;
@@ -27,7 +26,6 @@ import edu.psu.ist.mtb_hourworld.group.MTBGroupMainPage;
 import edu.psu.ist.mtb_hourworld.items.MTBTaskItems;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
-import edu.psu.ist.mtb_hourworld.sidebar.MTBSideBarActivity;
 import edu.psu.ist.mtb_hourworld.tasks.MTBAddRequestOfferPage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBTaskCategory;
 import edu.psu.ist.mtb_hourworld.tasks.MTBTaskDetailPage;
@@ -581,20 +579,24 @@ public class MTBOfferPage extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_search:
+        if (item.getItemId() == R.id.action_search) {
+        	
+        	
             // search action
         	search();
             return true;
-        case R.id.action_refresh:
-            // refresh
+        }
+        else if(item.getItemId() == R.id.action_refresh) {
+           // refresh
         	refresh();
             return true;
-        case R.id.action_new:
-            // new action
+        }
+        else if(item.getItemId() == R.id.action_new) {
+        	 // new action
         	add();
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }

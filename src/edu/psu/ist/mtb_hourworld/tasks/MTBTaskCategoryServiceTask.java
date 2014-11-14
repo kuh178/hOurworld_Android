@@ -338,13 +338,12 @@ public class MTBTaskCategoryServiceTask extends Activity {
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_new:
+        if (item.getItemId() == R.id.action_new) {
             // add
         	add();
-        	
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }

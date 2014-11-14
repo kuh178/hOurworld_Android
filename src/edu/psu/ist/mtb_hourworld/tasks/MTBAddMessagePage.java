@@ -274,13 +274,13 @@ public class MTBAddMessagePage extends FragmentActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.action_send_now:
-            // new action
+        if(item.getItemId() == R.id.action_send_now) {
+        	// new action
         	upload();
             return true;
-        default:
-            return super.onOptionsItemSelected(item);
+        }
+        else {
+        	return super.onOptionsItemSelected(item);
         }
     }
     

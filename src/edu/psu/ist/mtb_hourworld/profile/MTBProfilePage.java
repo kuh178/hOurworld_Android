@@ -1182,12 +1182,12 @@ public class MTBProfilePage extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
-        switch (item.getItemId()) {
-        case R.id.logout:
+        if(item.getItemId() == R.id.logout) {
             // logout action
         	logout();
             return true;
-        default:
+        }
+        else {
             return super.onOptionsItemSelected(item);
         }
     }
