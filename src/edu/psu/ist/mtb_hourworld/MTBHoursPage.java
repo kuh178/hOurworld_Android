@@ -153,61 +153,61 @@ public class MTBHoursPage extends Activity {
 				// TODO Auto-generated method stub
 				mHours = parent.getItemAtPosition(position).toString(); 
 				if(mHours.equals("15 mins")) {
-					mHours = "0.15";
+					mHours = "0.25";
 				}
 				else if(mHours.equals("30 mins")) {
-					mHours = "0.30";
+					mHours = "0.50";
 				}
 				else if(mHours.equals("45 mins")) {
-					mHours = "0.45";
+					mHours = "0.75";
 				}
 				else if(mHours.equals("60 mins")) {
 					mHours = "1.00";
 				}
 				else if(mHours.equals("75 mins")) {
-					mHours = "1.15";
+					mHours = "1.25";
 				}
 				else if(mHours.equals("90 mins")) {
-					mHours = "1.30";
+					mHours = "1.50";
 				}
 				else if(mHours.equals("105 mins")) {
-					mHours = "1.45";
+					mHours = "1.75";
 				}
 				else if(mHours.equals("120 mins")) {
 					mHours = "2.00";
 				}
 				else if(mHours.equals("135 mins")) {
-					mHours = "2.15";
+					mHours = "2.25";
 				}
 				else if(mHours.equals("150 mins")) {
-					mHours = "2.30";
+					mHours = "2.50";
 				}
 				else if(mHours.equals("165 mins")) {
-					mHours = "2.45";
+					mHours = "2.75";
 				}
 				else if(mHours.equals("180 mins")) {
 					mHours = "3.00";
 				}
 				else if(mHours.equals("195 mins")) {
-					mHours = "3.15";
+					mHours = "3.25";
 				}
 				else if(mHours.equals("210 mins")) {
-					mHours = "3.30";
+					mHours = "3.50";
 				}
 				else if(mHours.equals("225 mins")) {
-					mHours = "3.45";
+					mHours = "3.75";
 				}
 				else if(mHours.equals("240 mins")) {
 					mHours = "4.00";
 				}
 				else if(mHours.equals("255 mins")) {
-					mHours = "4.15";
+					mHours = "4.25";
 				}
 				else if(mHours.equals("270 mins")) {
-					mHours = "4.30";
+					mHours = "4.50";
 				}
 				else if(mHours.equals("285 mins")) {
-					mHours = "4.45";
+					mHours = "4.75";
 				}
 				else if(mHours.equals("300 mins")) {
 					mHours = "5.00";
@@ -252,8 +252,6 @@ public class MTBHoursPage extends Activity {
 					Toast.makeText(MTBHoursPage.this, "Please pick service", Toast.LENGTH_SHORT).show();
 				}
 				else {
-					
-
 					// vSatisfactionBtn selected
 					int vSatisfactionBtnSelectedID = vSatisfactionGroup.getCheckedRadioButtonId();
 					vSatisfactionBtn = (RadioButton)findViewById(vSatisfactionBtnSelectedID);
@@ -348,8 +346,7 @@ public class MTBHoursPage extends Activity {
 		    	entity.addPart("TDs", new StringBody(mHours));
 		    	entity.addPart("SvcCatID", new StringBody(Integer.toString(mSvcCatID)));
 		    	entity.addPart("SvcID", new StringBody(Integer.toString(mSvcID)));
-		    	
-		    	
+
 		    	Log.i("K", "accessToken:" + mPref.getString("access_token", ""));
 		    	Log.i("K", "EID:" + mPref.getInt("EID", 0));
 		    	Log.i("K", "memID:" + mPref.getInt("memID", 0));
@@ -365,7 +362,6 @@ public class MTBHoursPage extends Activity {
 		    	Log.i("K", "Service:" + mService);
 		    	Log.i("K", "SvcCatID:" + mSvcCatID);
 		    	Log.i("K", "SvcID:" + mSvcID);
-		    	
 	        	
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();

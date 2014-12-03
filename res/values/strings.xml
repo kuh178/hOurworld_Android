@@ -69,6 +69,18 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     
+    <!-- update message -->
+    <string name="update_request_message">There is a newer version. Do you want to update?</string>
+    <string name="update_request_title">Update</string>
+    <string name="update_request_later">Later</string>
+    
+    <!-- gps -->
+    <string name="get_location_title">Getting Your Location</string>
+    <string name="get_location_message">Please wait while finding your location...</string>
+    <string name="turn_on_gps_title">Turn on GPS</string>
+    <string name="turn_on_gps_message">Your location service is disabled. Please enable both \'Use Wireless Networks\' and \'Use GPS Satellites\'. Would you like to go to the Location and security settings page?</string>
+    <string name="location_not_detected_message">Location is not detected.</string>
+    
     <string name="report_hours">Report Hours</string>
     <string name="pick_a_member">Pick a member</string>
     <string name="pick_cat_service">Pick a service/category</string>

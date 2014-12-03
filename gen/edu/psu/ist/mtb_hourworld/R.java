@@ -2120,7 +2120,7 @@ containing a value of this type.
         public static final int action_search=0x7f0b0047;
         public static final int action_send_now=0x7f0b004e;
         public static final int action_text=0x7f0b0055;
-        public static final int add_date=0x7f0b006c;
+        public static final int add_date=0x7f0b0074;
         /**  main texts 
          */
         public static final int announcements=0x7f0b0040;
@@ -2241,9 +2241,9 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f0b002d;
-        public static final int completed_date=0x7f0b006b;
-        public static final int contact_list_prompt=0x7f0b007d;
-        public static final int content_description=0x7f0b0073;
+        public static final int completed_date=0x7f0b0073;
+        public static final int contact_list_prompt=0x7f0b0085;
+        public static final int content_description=0x7f0b007b;
         public static final int create_calendar_message=0x7f0b0012;
         public static final int create_calendar_title=0x7f0b0011;
         public static final int create_group=0x7f0b005b;
@@ -2253,22 +2253,27 @@ containing a value of this type.
         /** Replace placeholder ID with your tracking ID
          */
         public static final int ga_trackingId=0x7f0b0030;
+        public static final int get_location_message=0x7f0b006b;
+        /**  gps 
+         */
+        public static final int get_location_title=0x7f0b006a;
         public static final int groups=0x7f0b0044;
         public static final int hello=0x7f0b0032;
-        public static final int hour_prompt=0x7f0b007a;
+        public static final int hour_prompt=0x7f0b0082;
         public static final int hours=0x7f0b0045;
         public static final int hourworld=0x7f0b0038;
         public static final int hourworld_statement=0x7f0b0039;
         public static final int join_hourworld=0x7f0b003e;
-        public static final int leave_a_note=0x7f0b006d;
-        public static final int loading_title=0x7f0b0070;
+        public static final int leave_a_note=0x7f0b0075;
+        public static final int loading_title=0x7f0b0078;
+        public static final int location_not_detected_message=0x7f0b006e;
         public static final int login=0x7f0b003d;
         public static final int logout=0x7f0b005d;
-        public static final int mapKey=0x7f0b0078;
+        public static final int mapKey=0x7f0b0080;
         /** new key! (09162014) AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw 
  <string name="mapKeyDeveloper3">0s7Km0gbaIiLTFNd22M3EVS_xWeuOhPmeDhOlmA</string> 
          */
-        public static final int mapKey2=0x7f0b0077;
+        public static final int mapKey2=0x7f0b007f;
         /**  mtb_profile 
     <string name=""></string>
     <string name=""></string>
@@ -2292,40 +2297,47 @@ containing a value of this type.
  MapKey 
  note: I removed the developer keys. You should generate it on your own 
          */
-        public static final int mapKeyDeveloper=0x7f0b0074;
-        public static final int mapKeyDeveloper2=0x7f0b0075;
-        public static final int mapKeyDeveloper3=0x7f0b0076;
+        public static final int mapKeyDeveloper=0x7f0b007c;
+        public static final int mapKeyDeveloper2=0x7f0b007d;
+        public static final int mapKeyDeveloper3=0x7f0b007e;
         public static final int menu=0x7f0b0057;
         public static final int more=0x7f0b0046;
         public static final int my_location=0x7f0b0035;
-        public static final int name=0x7f0b0072;
+        public static final int name=0x7f0b007a;
         public static final int no=0x7f0b0066;
         public static final int offers=0x7f0b0041;
         public static final int password=0x7f0b003c;
-        public static final int pick_a_member=0x7f0b0068;
-        public static final int pick_cat_service=0x7f0b0069;
+        public static final int pick_a_member=0x7f0b0070;
+        public static final int pick_cat_service=0x7f0b0071;
         public static final int promo_text=0x7f0b003a;
-        public static final int reference_text=0x7f0b006f;
-        public static final int report_hours=0x7f0b0067;
-        public static final int request_offer_expiration_prompt=0x7f0b007c;
+        public static final int reference_text=0x7f0b0077;
+        public static final int report_hours=0x7f0b006f;
+        public static final int request_offer_expiration_prompt=0x7f0b0084;
         public static final int requests=0x7f0b0042;
         public static final int satellite_view=0x7f0b0036;
-        public static final int satisfaction_text=0x7f0b006e;
+        public static final int satisfaction_text=0x7f0b0076;
         public static final int search=0x7f0b0043;
         public static final int search_group=0x7f0b005c;
         public static final int search_hint=0x7f0b0056;
-        public static final int search_prompt=0x7f0b0079;
+        public static final int search_prompt=0x7f0b0081;
         public static final int store_picture_message=0x7f0b000e;
         public static final int store_picture_title=0x7f0b000d;
-        public static final int task_description=0x7f0b006a;
-        public static final int title=0x7f0b0071;
+        public static final int task_description=0x7f0b0072;
+        public static final int title=0x7f0b0079;
+        public static final int turn_on_gps_message=0x7f0b006d;
+        public static final int turn_on_gps_title=0x7f0b006c;
         public static final int two_arrows=0x7f0b0058;
         public static final int type_a_search_term=0x7f0b0059;
+        public static final int update_request_later=0x7f0b0069;
+        /**  update message 
+         */
+        public static final int update_request_message=0x7f0b0067;
+        public static final int update_request_title=0x7f0b0068;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
         public static final int wallet_buy_button_place_holder=0x7f0b002f;
-        public static final int xdays_prompt=0x7f0b007b;
+        public static final int xdays_prompt=0x7f0b0083;
         public static final int yes=0x7f0b0065;
     }
     public static final class style {

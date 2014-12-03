@@ -4,11 +4,15 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
@@ -39,6 +43,7 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Log;
@@ -198,20 +203,20 @@ public class MainActivity extends Activity {
 		
 		protected void onPostExecute(Boolean returnVal) {
 			
-			// if the return value is true, show dialog to upgrade the app.
+			if(dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			
+			// if the return value is true, ask if a user wants to upgrade the app.
 			if(returnVal) {
-				
-				if(dialog.isShowing()) {
-					dialog.dismiss();
-				}
-				
+	
 				mIsNewestVersion = false;
 				
 				new AlertDialog.Builder(MainActivity.this)
-				.setTitle("New version")
-				.setMessage("There is a newer version. Do you want to update?")
+				.setTitle(getString(R.string.update_request_title))
+				.setMessage(getString(R.string.update_request_message))
 				//.setIcon(R.drawable.hourworld_icon_30_30)
-				.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+				.setPositiveButton(getString(R.string.update_request_title), new DialogInterface.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -223,7 +228,7 @@ public class MainActivity extends Activity {
 				        startActivity(intent);
 					}
 				})
-				.setNegativeButton("Later", new DialogInterface.OnClickListener() {
+				.setNegativeButton(getString(R.string.update_request_later), new DialogInterface.OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -271,15 +276,159 @@ public class MainActivity extends Activity {
 
 				// temporary disable this
 				checkGpsIsOn();
+				checkAccountExpiration();
 				//startActivity();
-				
-				if(!dialog.equals(null) && dialog.isShowing()) {
-					dialog.dismiss();
-				}
 			}
+			
+			/*
+			// check if the user credential is still valid (or not expired yet)
+			
+			*/
 		}
     	
     }
+    
+    public void checkAccountExpiration() {
+    	
+    	Log.i("K", "access token: " + mPref.getString("access_token", ""));
+    	
+    	if(mPref.getString("access_token", "").equals("") || mPref.getString("access_token", "").equals(null)) {
+    		// logout
+    		Intent intent = new Intent(MainActivity.this, MTBLoginPage.class);
+        	intent.putExtra("prev_activity", Constants.FROM_BEGINNING);
+        	startActivity(intent);
+	    	finish();
+    	}
+    	else if(checkIfUserLoggedIn()) {
+    		// main page
+			Intent intent = new Intent(MainActivity.this, MTBMainMenuPage.class);
+        	intent.putExtra("terminate", false);
+        	startActivity(intent);
+        	finish();
+		}
+		else {
+			new AlertDialog.Builder(MainActivity.this)
+			.setTitle("Message")
+			.setIcon(R.drawable.hourworld_icon_30_30)
+			.setMessage("Your account has been expired. Please login again.")
+			.setPositiveButton("Login", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					
+					// clear sharedPreferences
+					Editor editor = mPref.edit();
+				    editor.clear();
+				    editor.commit();
+					
+					// logoutn
+					Intent intent = new Intent(MainActivity.this, MTBLoginPage.class);
+		        	intent.putExtra("prev_activity", Constants.FROM_BEGINNING);
+		        	startActivity(intent);
+			    	finish();
+				}
+			})
+			.show();
+		}
+    }
+    
+    public boolean checkIfUserLoggedIn() {
+    	
+    	checkUserStatus check = new checkUserStatus();
+		try {
+			return check.execute().get();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
+    	
+		return false;
+	}
+    
+    class checkUserStatus extends AsyncTask<Void, Integer, Boolean>{
+
+    	//ProgressDialog dialog;
+    	Dialog dialog = new Dialog(MainActivity.this);
+    	
+    	@Override
+    	protected void onPreExecute() {
+    		dialog.setContentView(R.layout.mtb_version_test_dialog);
+    		dialog.setTitle("Checking user account...");
+    		dialog.show();
+    	}
+    	
+		@Override
+		protected Boolean doInBackground(Void... arg0) {
+			HttpClient httpClient = new DefaultHttpClient();  	
+			String url = new String(Constants.AUTHENTICATE);
+		    
+		    HttpPost httpPost = new HttpPost(url);
+		    
+		    // add values and using library
+		    MultipartEntity entity = new MultipartEntity();
+		    
+		    try {
+		    	entity.addPart("requestType", new StringBody("Messages,0")); // specify a type of this request
+		    	entity.addPart("accessToken", new StringBody(mPref.getString("access_token", ""))); // send the access_token
+		    	//entity.addPart("accessToken", new StringBody("123456")); // send the access_token
+		    	entity.addPart("EID", new StringBody(Integer.toString(mPref.getInt("EID", 0))));
+		    	entity.addPart("memID", new StringBody(Integer.toString(mPref.getInt("memID", 0))));
+		    	
+	        	Log.i("K", mPref.getString("access_token", "") + " / " + Integer.toString(mPref.getInt("EID", 0)) + " / " + Integer.toString(mPref.getInt("memID", 0)));
+		    	
+		    	
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+		   
+			httpPost.setEntity(entity);
+
+			// output string
+			String result = "";
+			
+			try {
+				HttpResponse response = httpClient.execute(httpPost);
+			
+				Log.i("K", "getStatusCode : " + response.getStatusLine().getStatusCode());
+				
+				if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+					BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+					
+					StringBuilder result_str = new StringBuilder();
+					for(;;){
+						String line = br.readLine();
+						if (line == null) 
+							break;
+						result_str.append(line+'\n');
+					}
+					result = result_str.toString();
+					JSONObject jObj = new JSONObject(result);
+				
+					Log.i("K", "results: " + result);
+				
+					if(!jObj.getBoolean("success")){
+						return false;
+					}
+					else {
+						return true;
+					}
+				}
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	
+			return true;
+		}
+		
+		protected void onPostExecute(Boolean returnVal) {
+			if(!dialog.equals(null) && dialog.isShowing()) {
+				dialog.dismiss();
+			}
+		}
+	}
     
 	// get updated GPS data by the broadcast receiver
 	private BroadcastReceiver gpsReceiver = new BroadcastReceiver() {
@@ -342,11 +491,11 @@ public class MainActivity extends Activity {
             }
             // if already authenticated, go to the mainpage
             else {
-            	Intent intent = new Intent(this, MTBMainMenuPage.class);
-            	intent.putExtra("terminate", false);
-            	startActivity(intent);
+            	//Intent intent = new Intent(this, MTBMainMenuPage.class);
+            	//intent.putExtra("terminate", false);
+            	//startActivity(intent);
             	
-            	finish();
+            	//finish();
             }
         }
 	}
@@ -359,16 +508,15 @@ public class MainActivity extends Activity {
 		else {
 
 		 new AlertDialog.Builder(MainActivity.this)
-		   		.setTitle("Turn On GPS")
-		   		.setMessage("Your location service is disabled. Please enable both 'Use Wireless Networks' and 'Use GPS Satellites'. " +
-		   				"Would you like to go to the Location&security settings page?")
-		   		.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		   		.setTitle(getString(R.string.turn_on_gps_title))
+		   		.setMessage(getString(R.string.turn_on_gps_message))
+		   		.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
 		   			public void onClick(DialogInterface dialog, int whichButton) {
 		   				Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
 		   				startActivityForResult(intent, 1);
 		   			}
 		   		})
-		   		.setNegativeButton("No", new DialogInterface.OnClickListener() {
+		   		.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
 		   			public void onClick(DialogInterface dialog, int whichButton) {
 		   				finish();
 		   			}
@@ -405,8 +553,8 @@ public class MainActivity extends Activity {
 	    protected void onPreExecute() {
 
 	    	mGPSDialog = new ProgressDialog(MainActivity.this);
-	    	mGPSDialog.setTitle("Getting Your Location");
-	    	mGPSDialog.setMessage("Please wait while finding your location...");
+	    	mGPSDialog.setTitle(getString(R.string.get_location_title));
+	    	mGPSDialog.setMessage(getString(R.string.get_location_message));
 	    	mGPSDialog.setCancelable(true);
 	    	mGPSDialog.setOnCancelListener(new OnCancelListener() {
 
@@ -414,7 +562,7 @@ public class MainActivity extends Activity {
 				public void onCancel(DialogInterface arg0) {
 					
 					mGPSDialog.dismiss();
-					Toast.makeText(MainActivity.this, "Location is not detected.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, getString(R.string.location_not_detected_message), Toast.LENGTH_SHORT).show();
 					
 					if(!mPref.getBoolean("loggedin", false)) {
 						Intent intent = new Intent(MainActivity.this, MTBLoginPage.class);
