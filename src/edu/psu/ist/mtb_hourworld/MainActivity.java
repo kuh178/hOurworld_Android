@@ -240,7 +240,7 @@ public class MainActivity extends Activity {
 						registerReceiver(gpsReceiver, inFilter);
 
 						// temporary disable this
-						checkGpsIsOn();
+						// checkGpsIsOn();
 					}
 				})
 				.show();
@@ -275,7 +275,7 @@ public class MainActivity extends Activity {
 				registerReceiver(gpsReceiver, inFilter);
 
 				// temporary disable this
-				checkGpsIsOn();
+				//checkGpsIsOn();
 				checkAccountExpiration();
 				//startActivity();
 			}
@@ -293,7 +293,7 @@ public class MainActivity extends Activity {
     	Log.i("K", "access token: " + mPref.getString("access_token", ""));
     	
     	if(mPref.getString("access_token", "").equals("") || mPref.getString("access_token", "").equals(null)) {
-    		// logout
+    		// move to login
     		Intent intent = new Intent(MainActivity.this, MTBLoginPage.class);
         	intent.putExtra("prev_activity", Constants.FROM_BEGINNING);
         	startActivity(intent);
