@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <!-- Search / will display always -->
+    <!-- 
     <item android:id="@+id/action_search"
           android:icon="@drawable/ic_action_search"
           android:title="@string/action_search"
           android:showAsAction="never"/>
-	
+	-->
     <!-- Location Found -->
     <!-- 
     <item android:id="@+id/action_location_found"
@@ -27,10 +28,11 @@
           android:showAsAction="ifRoom" />
     
     <!-- Help -->
+    <!--
     <item android:id="@+id/action_help"
           android:icon="@drawable/ic_action_help"
           android:title="@string/action_help"
           android:showAsAction="never"/>
-     
+     -->
     
 </menu>

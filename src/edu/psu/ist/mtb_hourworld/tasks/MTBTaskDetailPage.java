@@ -482,7 +482,9 @@ public class MTBTaskDetailPage extends FragmentActivity {
         }
         else if(item.getItemId() == R.id.action_email) {
             // reply action
-        	email();
+        	if(!mEmailAddress.equals("")) {
+        		email();
+        	}
             return true;
         }
         else if(item.getItemId() == R.id.action_text) {	
@@ -547,10 +549,13 @@ public class MTBTaskDetailPage extends FragmentActivity {
     
     
     public void email() {
-    	Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Service inquiry");
-		emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
-		startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
+    	if(!mEmailAddress.equals(null) && !mEmailAddress.equals("")) {
+    		Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
+    		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Service inquiry");
+    		emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
+    		startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
+    	}
+
     }
     
     public void text() {

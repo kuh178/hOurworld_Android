@@ -223,8 +223,9 @@ public class MTBProfilePage extends Activity {
 	    	
 	    	vBalanceView.setVisibility(View.VISIBLE);
 	    	vStatementBtn.setVisibility(View.VISIBLE);
-	    	//vReportHourBtn.setVisibility(View.GONE);
+	    	vReportHourBtn.setVisibility(View.GONE);
 	    	
+	    	/*
 	    	vReportHourBtn.setText("Logout");
 	    	vReportHourBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -232,6 +233,7 @@ public class MTBProfilePage extends Activity {
 					// TODO Auto-generated method stub
 				}
 			});
+			*/
 	    	
 			vStatementBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -313,7 +315,7 @@ public class MTBProfilePage extends Activity {
 	    else {
 	    	vBalanceView.setVisibility(View.GONE);
 	    	vStatementBtn.setVisibility(View.GONE);
-	    	vReportHourBtn.setVisibility(View.VISIBLE);
+	    	vReportHourBtn.setVisibility(View.GONE);
 	    	
 	    	vReportHourBtn.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -390,6 +392,15 @@ public class MTBProfilePage extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_actions_profile, menu);
+        
+        if(mUserID == mPref.getInt("memID", 0)) {
+        	menu.findItem(R.id.logout).setVisible(true);
+        	menu.findItem(R.id.report).setVisible(false);
+	    }
+	    else {
+	    	menu.findItem(R.id.logout).setVisible(false);
+	    	menu.findItem(R.id.report).setVisible(true);
+	    }
  
         return super.onCreateOptionsMenu(menu);
     }

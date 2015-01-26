@@ -1578,7 +1578,7 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0a0035;
         public static final int action_bar_title=0x7f0a0034;
         public static final int action_context_bar=0x7f0a002f;
-        public static final int action_edit=0x7f0a0161;
+        public static final int action_edit=0x7f0a0162;
         public static final int action_email=0x7f0a0159;
         public static final int action_help=0x7f0a0156;
         public static final int action_menu_divider=0x7f0a0002;
@@ -1590,7 +1590,7 @@ containing a value of this type.
         public static final int action_remove=0x7f0a015b;
         public static final int action_report=0x7f0a0158;
         public static final int action_search=0x7f0a0153;
-        public static final int action_send_now=0x7f0a0160;
+        public static final int action_send_now=0x7f0a0161;
         public static final int action_text=0x7f0a015a;
         public static final int activity=0x7f0a00ee;
         public static final int activity_chooser_view_content=0x7f0a0037;
@@ -1830,6 +1830,7 @@ containing a value of this type.
         public static final int register_button=0x7f0a00c1;
         public static final int remove_message=0x7f0a00dc;
         public static final int reply_message=0x7f0a00d9;
+        public static final int report=0x7f0a0160;
         public static final int report_btn=0x7f0a00ed;
         public static final int report_hour=0x7f0a00db;
         public static final int report_hour2=0x7f0a013c;

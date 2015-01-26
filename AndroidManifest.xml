@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.psu.ist.mtb_hourworld"
-    android:versionCode="35"
-    android:versionName="1.1.11" >
+    android:versionCode="36"
+    android:versionName="1.1.12" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -155,19 +155,19 @@
 		 
 		<meta-data
     		android:name="com.google.android.maps.v2.API_KEY"
-    		android:value="XXX"/>
+    		android:value="AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw"/>
     	-->
 		<!-- release -->
 		<meta-data
     		android:name="com.google.android.maps.v2.API_KEY"
-    		android:value="XXX"/>
+    		android:value="AIzaSyCA7yrF-hYQXzr2HIzrKjfgYUcjl2RXmEA"/>
 		
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<activity android:name=".tasks.MTBTaskCategory" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		<activity android:name=".tasks.MTBTaskCategoryService" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		<activity android:name=".tasks.MTBTaskCategoryServiceTask" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		
-		<meta-data android:name="com.crashlytics.ApiKey" android:value="XXX"/>
+		<meta-data android:name="com.crashlytics.ApiKey" android:value="d57bf4c7e3f0cdc0ce35831e43ea329c168571b5"/>
 		
     </application>
 </manifest>

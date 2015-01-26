@@ -13,6 +13,10 @@
 		          android:icon="@drawable/ic_action_accounts"
 		          android:title="@string/logout"
 		          android:showAsAction="ifRoom|withText" />
+		    <item android:id="@+id/report"
+		          android:icon="@drawable/ic_action_send_now"
+		          android:title="@string/action_report"
+		          android:showAsAction="ifRoom|withText" />
         </menu>
  	</item>
 </menu>

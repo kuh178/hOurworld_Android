@@ -114,7 +114,7 @@
 			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:layout_weight="0.75"
-				android:text="Description"
+				android:text="Details"
 				android:textStyle="bold"
 				android:textSize="14sp"
 			    />

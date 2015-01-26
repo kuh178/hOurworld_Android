@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:compat="http://schemas.android.com/apk/res-auto" >
-
-    <!-- Reply -->
-    <item android:id="@+id/action_email"
-          android:icon="@drawable/ic_action_email"
-          android:title="@string/action_email"
-          android:showAsAction="ifRoom" />
-    
-    <!-- Text -->
-    <item android:id="@+id/action_text"
-		  android:icon="@drawable/ic_action_chat"
-	      android:title="@string/action_text"
-		  android:showAsAction="ifRoom|withText" />
     
     <item
         android:id="@+id/action_more"
@@ -20,7 +8,18 @@
         android:showAsAction="always"
         android:title="@string/action_more">
         <menu>
-            
+            <!-- Reply -->
+		    <item android:id="@+id/action_email"
+		          android:icon="@drawable/ic_action_email"
+		          android:title="@string/action_email"
+		          android:showAsAction="ifRoom" />
+		    
+		    <!-- Text -->
+		    <item android:id="@+id/action_text"
+				  android:icon="@drawable/ic_action_chat"
+			      android:title="@string/action_text"
+				  android:showAsAction="ifRoom|withText" />
+		    
             <!-- Report -->
 		    <item android:id="@+id/action_report"
 		          android:icon="@drawable/ic_action_send_now"

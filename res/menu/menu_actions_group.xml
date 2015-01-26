@@ -3,10 +3,7 @@
       xmlns:compat="http://schemas.android.com/apk/res-auto" >
 
     <!-- Search group -->
-    <item android:id="@+id/search_group"
-          android:icon="@drawable/ic_action_search"
-          android:title="@string/search_group"
-          android:showAsAction="ifRoom" />
+    
     
     <item
         android:id="@+id/action_more"
@@ -14,6 +11,10 @@
         android:showAsAction="always"
         android:title="@string/action_more">
         <menu>
+            <item android:id="@+id/search_group"
+          		  android:icon="@drawable/ic_action_search"
+          		  android:title="@string/search_group"
+          		  android:showAsAction="ifRoom" />
             <!-- Create group -->
 		    <item android:id="@+id/create_group"
 		          android:icon="@drawable/ic_action_new"
