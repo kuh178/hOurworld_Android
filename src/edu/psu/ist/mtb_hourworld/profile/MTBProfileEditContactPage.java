@@ -39,6 +39,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -236,10 +237,20 @@ public class MTBProfileEditContactPage extends Activity {
 			TextView contactType = (TextView)offerView.findViewById(R.id.contact_type);
 			final EditText contactInfo = (EditText)offerView.findViewById(R.id.contact_info);
 			Button contactUpdate = (Button)offerView.findViewById(R.id.add_contact);
+			final Switch contactPrivate = (Switch)offerView.findViewById(R.id.private_switch);
 			contactUpdate.setTag(mArr.get(i));
 
 			contactType.setText(mArr.get(i).contactType);
 			contactInfo.setText(mArr.get(i).contactInfo);
+			
+			Log.i("K", "mArr.get(i).contactPrivate : " + mArr.get(i).contactPrivate);
+			
+			if(mArr.get(i).contactPrivate.equals("T")) {
+				contactPrivate.setChecked(true);
+			}
+			else {
+				contactPrivate.setChecked(false);
+			}
 			//mContactType.put(mArr.get(i).contactType, true);
 			
 			contactUpdate.setOnClickListener(new View.OnClickListener() {
@@ -248,10 +259,38 @@ public class MTBProfileEditContactPage extends Activity {
 				public void onClick(View v) {
 					// update contact info
 					contactItem cItem = (contactItem)v.getTag();
+					String checkPrivate = "";
 					
-					updateContact updateC = new updateContact(cItem.contactType, contactInfo.getText().toString().trim());
-					updateC.execute();
+					if(contactPrivate.isChecked()) {
+						checkPrivate = "T";
+					}
+					else {
+						checkPrivate = "F";
+					}
 					
+					String contactValue = contactInfo.getText().toString().replace("-", "").trim();
+					
+					if(cItem.contactType.equals("Home1") || cItem.contactType.equals("Mobile")) {
+						if(contactValue.length() == 10) {
+							
+							String contactValue_1 = contactValue.substring(0, 3);
+							String contactValue_2 = contactValue.substring(3, 6);
+							String contactValue_3 = contactValue.substring(6, 10);
+							
+							contactValue = contactValue_1 + "-" + contactValue_2 + "-" + contactValue_3;
+							
+							updateContact updateC = new updateContact(cItem.contactType, contactValue, checkPrivate);
+							updateC.execute();
+						}
+						else {
+							Toast.makeText(MTBProfileEditContactPage.this, "Phone number should be 10-digits", Toast.LENGTH_SHORT).show();
+						}
+					}
+					else{
+						updateContact updateC = new updateContact(cItem.contactType, contactValue, checkPrivate);
+						updateC.execute();
+					}
+
 				}
 			});
 			
@@ -265,10 +304,12 @@ public class MTBProfileEditContactPage extends Activity {
 		private ProgressDialog mDialog;
 		private String mType;
 		private String mInfo;
+		private String mPrivate;
 		
-		public updateContact(String type, String info) {
+		public updateContact(String type, String info, String privateInfo) {
 			mType = type;
 			mInfo = info;
+			mPrivate = privateInfo;
 		}
 		
 		@Override
@@ -291,7 +332,7 @@ public class MTBProfileEditContactPage extends Activity {
 		@Override
 		protected Boolean doInBackground(Void... params) {
 			MTBUploadHandler upload = new MTBUploadHandler(MTBProfileEditContactPage.this);
-			return upload.updateContact(mType, mInfo);
+			return upload.updateContact(mType, mInfo, mPrivate);
 		}
 		
 		@Override

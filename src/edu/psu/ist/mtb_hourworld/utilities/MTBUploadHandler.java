@@ -680,7 +680,7 @@ public class MTBUploadHandler {
 		return false;
 	}
 	
-	public boolean updateContact(String type, String contact) {
+	public boolean updateContact(String type, String contact, String privateInfo) {
 		if (Looper.myLooper() == null)
 			Looper.prepare();
 		
@@ -700,7 +700,7 @@ public class MTBUploadHandler {
 	    	entity.addPart("memID", new StringBody(Integer.toString(mPref.getInt("memID", 0))));
 	    	entity.addPart("Type", new StringBody(type));
 	    	entity.addPart("Contact", new StringBody(contact));
-	    	entity.addPart("Private", new StringBody("F"));
+	    	entity.addPart("Private", new StringBody(privateInfo));
 	    	
 	    	Log.i("K", "requestType: EditAddress,SAVE");
 	    	Log.i("K", "accessToken: " + mPref.getString("access_token", ""));
@@ -708,7 +708,7 @@ public class MTBUploadHandler {
 	    	Log.i("K", "memID: " + mPref.getInt("memID", 0));
 	    	Log.i("K", "Type: " + type);
 	    	Log.i("K", "Contact: " + contact);
-	    	Log.i("K", "Private: " + "F");
+	    	Log.i("K", "Private: " + privateInfo);
 
 		} catch (UnsupportedEncodingException e1) {
 			e1.printStackTrace();
