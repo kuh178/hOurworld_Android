@@ -55,7 +55,8 @@ public class MTBCategoryAdapter extends BaseAdapter {
 			categoryView.setText(mArr.get(position).SvcCat);
 		}
 		else {
-			categoryView.setText(mArr.get(position).Service + " (" + mArr.get(position).count + ")");
+			//categoryView.setText(mArr.get(position).Service + " (" + mArr.get(position).count + ")");
+			categoryView.setText(mArr.get(position).Service);
 		}
 		
 		

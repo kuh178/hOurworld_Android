@@ -24,6 +24,7 @@ import edu.psu.ist.mtb_hourworld.constants.Constants;
 import edu.psu.ist.mtb_hourworld.items.MTBTaskItems;
 import edu.psu.ist.mtb_hourworld.search.MTBSearchMainPage;
 import edu.psu.ist.mtb_hourworld.settings.MTBSettings;
+import edu.psu.ist.mtb_hourworld.tasks.MTBAddRequestOfferPage;
 import edu.psu.ist.mtb_hourworld.tasks.MTBTaskCategory;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -89,7 +90,8 @@ public class MTBMainMenuPage extends Activity {
 			public void onClick(View v) {
 				//startActivity(new Intent(MTBMainMenuPage.this, MTBOfferPage.class));
 				
-				Intent intent = new Intent(MTBMainMenuPage.this, MTBTaskCategory.class);
+				//Intent intent = new Intent(MTBMainMenuPage.this, MTBTaskCategory.class);
+				Intent intent = new Intent(MTBMainMenuPage.this, MTBAddRequestOfferPage.class);				
 				intent.putExtra("mIsRequest", "F");
 				intent.putExtra("mIsOffer", "T");
 				startActivity(intent);
@@ -101,7 +103,8 @@ public class MTBMainMenuPage extends Activity {
 			public void onClick(View v) {
 				//startActivity(new Intent(MTBMainMenuPage.this, MTBRequestPage.class));
 				
-				Intent intent = new Intent(MTBMainMenuPage.this, MTBTaskCategory.class);
+				//Intent intent = new Intent(MTBMainMenuPage.this, MTBTaskCategory.class);
+				Intent intent = new Intent(MTBMainMenuPage.this, MTBAddRequestOfferPage.class);
 				intent.putExtra("mIsRequest", "T");
 				intent.putExtra("mIsOffer", "F");
 				startActivity(intent);

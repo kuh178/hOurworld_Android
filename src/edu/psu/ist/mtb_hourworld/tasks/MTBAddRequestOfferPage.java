@@ -71,13 +71,15 @@ public class MTBAddRequestOfferPage extends Activity {
 	    
 	    if(mIsOffer.equals("T")) {
 	    	//vHeaderText.setText(" [1/3] Pick a category for your offer");
-	    	setTitle("[1/3] Pick a category for your offer");
+	    	//setTitle("[1/3] Pick a category for your offer");
+	    	setTitle(" Offer category");
 	    	getActionBar().setIcon(R.drawable.offers);
 		    //getActionBar().setDisplayHomeAsUpEnabled(true);
 	    }
 	    else {
 	    	//vHeaderText.setText(" [1/3] Pick a category for your request");
-	    	setTitle("[1/3] Pick a category for your request");
+	    	//setTitle("[1/3] Pick a category for your request");
+	    	setTitle(" Request category");
 	    	getActionBar().setIcon(R.drawable.requests);
 		    //getActionBar().setDisplayHomeAsUpEnabled(true);
 	    }
@@ -168,7 +170,8 @@ public class MTBAddRequestOfferPage extends Activity {
 							sc.SvcCat = jItemObj.getString("SvcCat");
 							
 							if(sc.SvcCat.contains("0")) {
-								sc.SvcCat = sc.SvcCat.replaceAll("0", "").trim();
+								//sc.SvcCat = sc.SvcCat.replaceAll("0", "").trim();
+								continue;
 							}
 							
 							mArr.add(sc);

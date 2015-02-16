@@ -76,13 +76,15 @@ public class MTBAddRequestOfferPage2 extends Activity {
 
 	    if(mIsOffer.equals("T")) {
 	    	//vHeaderText.setText(" [2/3] " + mSvcCat + " > Pick a service for your offer");
-	    	setTitle("[2/3] Pick a service for your offer");
+	    	//setTitle("[2/3] Pick a service for your offer");
+	    	setTitle("Offer service");
 	    	getActionBar().setIcon(R.drawable.offers);
 		    //getActionBar().setDisplayHomeAsUpEnabled(true);
 	    }
 	    else {
 	    	//vHeaderText.setText(" [2/3] " + mSvcCat + " > Pick a service for your request");
-	    	setTitle("[2/3] Pick a service for your request");
+	    	//setTitle("[2/3] Pick a service for your request");
+	    	setTitle("Request service");
 	    	getActionBar().setIcon(R.drawable.requests);
 		    //getActionBar().setDisplayHomeAsUpEnabled(true);
 	    }
@@ -209,7 +211,8 @@ public class MTBAddRequestOfferPage2 extends Activity {
 
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View parent, int position, long arg3) {
-						Intent intent = new Intent(MTBAddRequestOfferPage2.this, MTBAddRequestOfferPage3.class);
+						
+						Intent intent = new Intent(MTBAddRequestOfferPage2.this, MTBTaskCategoryServiceTask.class);
 						intent.putExtra("SvcCatID", mArr.get(position).SvcCatID);
 						intent.putExtra("SvcID", mArr.get(position).SvcID);
 						intent.putExtra("SvcCat", mSvcCat);

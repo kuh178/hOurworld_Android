@@ -195,6 +195,11 @@ public class MTBTaskCategoryServiceTask extends Activity {
 							
 							JSONObject jItemObj = jAry.getJSONObject(i);
 							
+							// if SvcCatID and SvcID == 1000, move to the next item
+							if(jItemObj.getString("SvcCatID").equals("1000") && jItemObj.getString("SvcID").equals("1000")) {
+								continue;
+							}
+							
 							MTBTaskItems item = new MTBTaskItems();
 							item.setListMemID(jItemObj.getInt("listMbrID"));
 							
@@ -330,7 +335,7 @@ public class MTBTaskCategoryServiceTask extends Activity {
 			else {
 				mLoadingBar.setVisibility(View.GONE);
 				//mLoadingText.setVisibility(View.GONE);
-				mLoadingText.setText("No new task available");
+				mLoadingText.setText("No new task available.");
 			}
 		}
 	}
