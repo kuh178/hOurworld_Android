@@ -130,6 +130,7 @@ public class MTBAddRequestOfferPage2 extends Activity {
 		    // add values and using library
 		    MultipartEntity entity = new MultipartEntity();
 		    
+		    
 		    try {
 		    	entity.addPart("requestType", new StringBody("AddTask,SVC")); // specify a type of this request
 		    	entity.addPart("accessToken", new StringBody(mPref.getString("access_token", ""))); // send the access_token
@@ -140,6 +141,26 @@ public class MTBAddRequestOfferPage2 extends Activity {
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();
 			}
+			
+		    
+		    /*
+		    try {
+		    	if(mIsOffer.equals("T")) {
+		    		entity.addPart("requestType", new StringBody("OfferCatsC," + mSvcCatID)); // specify a type of this request
+		    	}
+		    	else {
+		    		entity.addPart("requestType", new StringBody("RequestCatsC," + mSvcCatID)); // specify a type of this request
+		    	}
+		    	
+		    	entity.addPart("accessToken", new StringBody(mPref.getString("access_token", ""))); // send the access_token
+		    	entity.addPart("EID", new StringBody(Integer.toString(mPref.getInt("EID", 0))));
+		    	entity.addPart("memID", new StringBody(Integer.toString(mPref.getInt("memID", 0))));
+		    	entity.addPart("SvcCatID", new StringBody(Integer.toString(mSvcCatID)));
+		    	
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+			*/
 		   
 			httpPost.setEntity(entity);
 
@@ -176,6 +197,7 @@ public class MTBAddRequestOfferPage2 extends Activity {
 							sc.SvcCatID = jItemObj.getInt("SvcCatID");
 							sc.SvcID = jItemObj.getInt("SvcID");
 							sc.Service = jItemObj.getString("Service");
+							//sc.count = jItemObj.getInt("Count");
 							
 							mArr.add(sc);
 						}

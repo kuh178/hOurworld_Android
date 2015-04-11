@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
+import edu.psu.ist.mtb_hourworld.MTBProfileSendPrivateEmailPage;
 import edu.psu.ist.mtb_hourworld.R;
 import edu.psu.ist.mtb_hourworld.account.MTBLoginPage;
 import edu.psu.ist.mtb_hourworld.constants.Constants;
@@ -71,6 +72,7 @@ public class MTBProfilePage extends Activity {
 
 	private Button messageBtn;
 	private Button vReportHourBtn;
+	private Button vPrivateEmailBtn;
 	
 	private ImageView vBadge1;
 	private ImageView vBadge2;
@@ -181,6 +183,7 @@ public class MTBProfilePage extends Activity {
 	    balanceView = (TextView)findViewById(R.id.balance);
 	    messageBtn = (Button)findViewById(R.id.message_btn);
 	    vStatementBtn = (Button)findViewById(R.id.statement_btn);
+	    vPrivateEmailBtn = (Button)findViewById(R.id.private_email_btn);
 	    
 	    vBadge1 = (ImageView)findViewById(R.id.badge_1);
 	    vBadge2 = (ImageView)findViewById(R.id.badge_2);
@@ -364,19 +367,23 @@ public class MTBProfilePage extends Activity {
 			});
 	    }
 	    
+	    vPrivateEmailBtn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				Intent intent = new Intent(MTBProfilePage.this, MTBProfileSendPrivateEmailPage.class);
+				intent.putExtra("userID", mUserID);
+				startActivity(intent);
+			}
+		});
+	    
 	    mScrollView.setVisibility(View.GONE);
 		mLoadingBar.setVisibility(View.VISIBLE);
 	    mLoadingText.setVisibility(View.VISIBLE);
 	    
 	    mLoadingText.setText("Loading data...");
 	    
-	    // initialize
-	    mContact = "";
-		mUsername = "";
-		mProfileImage = "";
-		mCity = "";
-		mBio = "";
-		
 		mGroupArr.clear();
 		mOfferArr.clear();
 		mRequestArr.clear();
@@ -385,7 +392,6 @@ public class MTBProfilePage extends Activity {
 		offerSuperView.removeAllViews();
 		requestSuperView.removeAllViews();
 
-		new getProfileDetails().execute();
 	}
 	
 	@Override
@@ -408,6 +414,19 @@ public class MTBProfilePage extends Activity {
 	@Override
 	public void onResume() {
 		super.onResume();
+		
+		// initialize
+	    mContact = "";
+		mUsername = "";
+		mProfileImage = "";
+		mCity = "";
+		mBio = "";
+		
+		mGroupArr.clear();
+		mOfferArr.clear();
+		mRequestArr.clear();
+		
+		new getProfileDetails().execute();
 	}
 	
 	@Override
@@ -487,7 +506,7 @@ public class MTBProfilePage extends Activity {
 
 			// output string
 			String result = "";
-			
+
 			try {
 				HttpResponse response = httpClient.execute(httpPost);
 			
@@ -769,6 +788,13 @@ public class MTBProfilePage extends Activity {
 				activityView.setText(mTotalTrans + " exchanges with " + mTotalMembers + " different members.\nProvided " + mTotalReceived + " times.\n" + mSatisfaction + " % Satisfied.");
 				
 				// contact
+				// if there's an email provided by the server, hide the button
+				if(mContact.contains("Email1")) {
+					vPrivateEmailBtn.setVisibility(View.GONE);
+				}
+				else { 
+					vPrivateEmailBtn.setVisibility(View.VISIBLE);
+				}
 				contactView.setText(mContact);
 				
 				// address

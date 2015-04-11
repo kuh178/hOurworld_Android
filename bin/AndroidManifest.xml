@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.psu.ist.mtb_hourworld"
-    android:versionCode="37"
-    android:versionName="1.1.13" >
+    android:versionCode="39"
+    android:versionName="1.1.15" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
     
     <uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -15,7 +15,7 @@
 	then you need to request only the ACCESS_FINE_LOCATION permission, 
 	because it includes permission for both providers. 
 	(Permission for ACCESS_COARSE_LOCATION includes permission only for NETWORK_PROVIDER.) -->
-	<!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<!-- <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES"  /> -->
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -37,6 +37,9 @@
     <!-- Keeps the processor from sleeping when a message is received -->
     <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
     <!-- end GCM permissions -->
+    
+    
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
     
     <application
         android:allowBackup="true"
@@ -151,18 +154,24 @@
 		<!-- search -->
 		<meta-data android:name="android.app.searchable" android:value=".hours.MTBHoursPickMember" android:resource="@xml/searchable" />
 		
-
+		<!-- debug 
+		 
+		<meta-data
+    		android:name="com.google.android.maps.v2.API_KEY"
+    		android:value="AIzaSyDguPlYLnyJb8w_HgA6dPV34SkODm0xxuw"/>
+    	-->
 		<!-- release -->
 		<meta-data
     		android:name="com.google.android.maps.v2.API_KEY"
-    		android:value="xxx"/>
+    		android:value="AIzaSyBqocDElcghjvlbibYEm2WnYJP-ViRjLOQ"/>
 		
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<activity android:name=".tasks.MTBTaskCategory" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		<activity android:name=".tasks.MTBTaskCategoryService" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		<activity android:name=".tasks.MTBTaskCategoryServiceTask" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light"></activity>
 		
-		<meta-data android:name="com.crashlytics.ApiKey" android:value="xxx"/>
+		<meta-data android:name="com.crashlytics.ApiKey" android:value="d57bf4c7e3f0cdc0ce35831e43ea329c168571b5"/>
+		<activity android:name="MTBProfileSendPrivateEmailPage"></activity>
 		
     </application>
 </manifest>

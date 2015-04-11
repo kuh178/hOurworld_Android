@@ -182,7 +182,7 @@ public class MTBTaskCategoryService extends Activity {
 						sc.SvcCatID = jItemObj.getInt("SvcCatID");
 						sc.SvcID = jItemObj.getInt("SvcID");
 						sc.Service = jItemObj.getString("Service");
-						sc.count = jItemObj.getInt("Count");
+						//sc.count = jItemObj.getInt("Count");
 						
 						mArr.add(sc);
 					}

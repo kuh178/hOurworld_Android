@@ -307,6 +307,13 @@
 				android:layout_gravity="center"
 				android:autoLink="all"
 			/>
+			<Button
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/private_email_btn"
+			    android:text="Send a private email"
+			    android:visibility="gone"
+			    />
 		</LinearLayout>
 		
 		<!-- Address  -->

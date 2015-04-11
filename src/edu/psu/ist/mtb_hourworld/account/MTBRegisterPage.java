@@ -72,7 +72,7 @@ public class MTBRegisterPage extends FragmentActivity {
 	    mMapFragment = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map));
 	    mMap = mMapFragment.getMap();
 	    
-	    options.mapType(GoogleMap.MAP_TYPE_SATELLITE).compassEnabled(false)
+	    options.mapType(GoogleMap.MAP_TYPE_NORMAL).compassEnabled(false)
 	    .rotateGesturesEnabled(false)
 	    .zoomControlsEnabled(true)
 	    .compassEnabled(true)
