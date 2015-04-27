@@ -687,7 +687,7 @@ public class MTBProfilePage extends Activity {
 							}
 							else {
 								mTotalServicesLink = badgeItems[0];
-								mTotalServicesTitle = badgeItems[1];
+								mTotalServicesTitle = mPref.getString("username", "hOurworld");
 							}
 							
 							badgeItems = jBadgeAry.getString(1).split(",");
@@ -697,7 +697,7 @@ public class MTBProfilePage extends Activity {
 							}
 							else {
 								mTotalReceivesLink = badgeItems[0];
-								mTotalReceivesTitle = badgeItems[1];
+								mTotalReceivesTitle = mPref.getString("username", "hOurworld");
 							}
 							
 							badgeItems = jBadgeAry.getString(2).split(",");
@@ -707,7 +707,7 @@ public class MTBProfilePage extends Activity {
 							}
 							else {
 								mTotalExcHoursLink = badgeItems[0];
-								mTotalExcHoursTitle = badgeItems[1];
+								mTotalExcHoursTitle = mPref.getString("username", "hOurworld");
 							}
 							
 							badgeItems = jBadgeAry.getString(3).split(",");
@@ -717,7 +717,7 @@ public class MTBProfilePage extends Activity {
 							}
 							else {
 								mTotalRefsLink = badgeItems[0];
-								mTotalRefsTitle = badgeItems[1];
+								mTotalRefsTitle = mPref.getString("username", "hOurworld");
 							}
 							
 							badgeItems = jBadgeAry.getString(5).split(",");
@@ -737,7 +737,7 @@ public class MTBProfilePage extends Activity {
 							}
 							else {
 								mConsecMoLink = badgeItems[0];
-								mConsecMoTitle = badgeItems[1];
+								mConsecMoTitle = mPref.getString("username", "hOurworld");
 							}
 						}
 						

@@ -98,6 +98,10 @@
     
     <string name="content_description">image</string>
     
+    <string name="private_email_title">Add a subject here</string>
+    <string name="private_email_message">Add an email message here</string>
+    <string name="private_email_send">Send</string>
+    
     <!-- mtb_profile 
     <string name=""></string>
     <string name=""></string>

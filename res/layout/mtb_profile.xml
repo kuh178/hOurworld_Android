@@ -161,52 +161,52 @@
 			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
-				android:weightSum="1"
+				android:weightSum="6"
 			    >
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_1"
 				    android:contentDescription="@string/badge_1"
 				    />
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_2"
 				    android:contentDescription="@string/badge_2"
 				    />
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_3"
 				    android:contentDescription="@string/badge_3"
 				    />
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_4"
 				    android:contentDescription="@string/badge_4"
 				    />
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_5"
 				    android:contentDescription="@string/badge_5"
 				    />
 				<ImageView
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:layout_weight="0.16"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
 				    android:layout_margin="2dp"
 				    android:id="@+id/badge_6"
 				    android:contentDescription="@string/badge_6"
@@ -298,22 +298,32 @@
 				android:layout_width="fill_parent"
 				android:layout_height="2dp"
 				android:background="@drawable/blue_bar" />
-			<TextView
-				android:layout_width="fill_parent"
+			<LinearLayout
+			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:text="contact"
-				android:textSize="15sp"
-				android:id="@+id/contact"
-				android:layout_gravity="center"
-				android:autoLink="all"
-			/>
-			<Button
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:id="@+id/private_email_btn"
-			    android:text="Send a private email"
-			    android:visibility="gone"
-			    />
+				android:orientation="horizontal"
+				android:weightSum="5"
+			    >
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:text="contact"
+					android:textSize="15sp"
+					android:id="@+id/contact"
+					android:layout_gravity="center"
+					android:autoLink="all"
+				/>
+				<Button
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="3"
+				    android:id="@+id/private_email_btn"
+				    android:text="Send private email"
+				    android:visibility="gone"
+				    android:textSize="12sp"
+				    />
+			</LinearLayout>
 		</LinearLayout>
 		
 		<!-- Address  -->

@@ -1159,4 +1159,79 @@ public class MTBUploadHandler {
 		return false;
 	}
 	
+	
+	public boolean sendPrivateEmail(int userID, String title, String message) {
+		if (Looper.myLooper() == null)
+			Looper.prepare();
+		
+		HttpClient httpClient = new DefaultHttpClient();  		    
+	    String url = new String(Constants.AUTHENTICATE);
+	    HttpPost httpPost = new HttpPost(url);
+	    
+	    Log.i("K", "update the contact info");
+	    
+	    // add values and using library
+	    MultipartEntity entity = new MultipartEntity();
+	    
+	    try {
+	    	entity.addPart("requestType", new StringBody("Reply")); // specify a type of this request
+	    	entity.addPart("accessToken", new StringBody(mPref.getString("access_token", ""))); // send the access_token
+	    	entity.addPart("EID", new StringBody(Integer.toString(mPref.getInt("EID", 0))));
+	    	entity.addPart("memID", new StringBody(Integer.toString(mPref.getInt("memID", 0))));
+	    	entity.addPart("toID", new StringBody(Integer.toString(userID)));
+	    	entity.addPart("subject", new StringBody(title));
+	    	entity.addPart("message", new StringBody(message));
+
+		} catch (UnsupportedEncodingException e1) {
+			e1.printStackTrace();
+		}
+	   
+	    httpPost.setEntity(entity);
+	    // output string
+		String result = "";
+		
+		try {
+			HttpResponse response = httpClient.execute(httpPost);
+		
+			Log.i("K", "getStatusCode : " + response.getStatusLine().getStatusCode());
+			
+			if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+				BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+				
+				StringBuilder result_str = new StringBuilder();
+				for(;;){
+					String line = br.readLine();
+					if (line == null) 
+						break;
+					result_str.append(line+'\n');
+				}
+				
+				result = result_str.toString();
+				
+				Log.i("K", "results: " + result);
+				
+				JSONObject jObj;
+				try {
+					jObj = new JSONObject(result);
+				
+					if(jObj.getBoolean("success")){
+						return true;
+					}
+					else {
+						return false;
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			} 
+		} catch (ClientProtocolException e) {
+			return false;
+			
+		} catch (IOException e) {
+			return false;
+		}
+		
+		return false;
+	}
+	
 }

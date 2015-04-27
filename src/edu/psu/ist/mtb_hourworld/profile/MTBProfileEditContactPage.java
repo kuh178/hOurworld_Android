@@ -317,7 +317,7 @@ public class MTBProfileEditContactPage extends Activity {
 
 			mDialog = new ProgressDialog(MTBProfileEditContactPage.this);
 			mDialog.setTitle("Updating contact");
-			mDialog.setMessage("Please waiting...");
+			mDialog.setMessage("Please wait...");
 			mDialog.setCancelable(true);
 			mDialog.setOnCancelListener(new OnCancelListener() {
 				@Override
