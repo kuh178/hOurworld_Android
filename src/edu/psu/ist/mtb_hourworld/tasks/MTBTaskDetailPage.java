@@ -8,6 +8,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import edu.psu.ist.mtb_hourworld.MTBProfileSendPrivateEmailPage;
 import edu.psu.ist.mtb_hourworld.R;
 import edu.psu.ist.mtb_hourworld.profile.MTBProfilePage;
 import edu.psu.ist.mtb_hourworld.utilities.MTBImageLoader;
@@ -482,9 +483,12 @@ public class MTBTaskDetailPage extends FragmentActivity {
         }
         else if(item.getItemId() == R.id.action_email) {
             // reply action
+        	/*
         	if(!mEmailAddress.equals("")) {
         		email();
         	}
+        	*/
+        	email();
             return true;
         }
         else if(item.getItemId() == R.id.action_text) {	
@@ -549,12 +553,18 @@ public class MTBTaskDetailPage extends FragmentActivity {
     
     
     public void email() {
+    	/*
     	if(!mEmailAddress.equals(null) && !mEmailAddress.equals("")) {
     		Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
     		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Service inquiry");
     		emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
     		startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
     	}
+    	*/
+    	
+    	Intent intent = new Intent(MTBTaskDetailPage.this, MTBProfileSendPrivateEmailPage.class);
+		intent.putExtra("userID", mMemID);
+		startActivity(intent);
 
     }
     

@@ -113,7 +113,7 @@
 			<TextView 
 			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.75"
+				android:layout_weight="0.7"
 				android:text="Details"
 				android:textStyle="bold"
 				android:textSize="14sp"
@@ -121,7 +121,7 @@
 			<TextView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.25"
+				android:layout_weight="0.3"
 				android:text="Description"
 				android:textSize="16sp"
 				android:id="@+id/description"
@@ -139,7 +139,7 @@
 			<TextView 
 			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.75"
+				android:layout_weight="0.7"
 				android:text="Requested Date"
 				android:textSize="14sp"
 				android:textStyle="bold"
@@ -147,7 +147,7 @@
 			<TextView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.25"
+				android:layout_weight="0.3"
 				android:text="Date and Time"
 				android:textSize="16sp"
 				android:id="@+id/datetime"
@@ -165,7 +165,7 @@
 			<TextView 
 			    android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.75"
+				android:layout_weight="0.7"
 				android:text="Time Amount"
 				android:textSize="13sp"
 				android:textStyle="bold"
@@ -173,7 +173,7 @@
 			<TextView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
-				android:layout_weight="0.25"
+				android:layout_weight="0.3"
 				android:text="Amount"
 				android:textSize="16sp"
 				android:id="@+id/amount"
@@ -192,7 +192,7 @@
 			<LinearLayout
 			    android:layout_width="fill_parent"
 			    android:layout_height="wrap_content"
-			    android:layout_weight="0.75"
+			    android:layout_weight="0.7"
 			    android:orientation="vertical"
 			    >
 			   	<TextView 
@@ -248,7 +248,7 @@
           		android:layout_above="@+id/footer"
           		android:layout_width="match_parent"
           		android:layout_height="150dp"
-          		android:layout_weight="0.25"
+          		android:layout_weight="0.3"
           		android:name="com.google.android.gms.maps.SupportMapFragment"/>
 			<TextView
 			    android:layout_width="fill_parent"

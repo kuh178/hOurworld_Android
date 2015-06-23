@@ -14,6 +14,7 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
+import edu.psu.ist.mtb_hourworld.MTBProfileSendPrivateEmailPage;
 import edu.psu.ist.mtb_hourworld.R;
 import edu.psu.ist.mtb_hourworld.profile.MTBProfilePage;
 import edu.psu.ist.mtb_hourworld.utilities.MTBImageLoader;
@@ -536,12 +537,18 @@ public class MTBMessageDetailPage extends FragmentActivity {
 	
 	public void email() {
 		
+		/*
 		if(mEmailAddress != null) {
 			Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", mEmailAddress, null));
 			emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Email " + mUsername);
 			emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi there,\n\nI'm inquiring about your listing. \n\n" + mDescription + "\n\n");
 			startActivity(Intent.createChooser(emailIntent, "Service inquiry"));
 		}
+		*/
+		
+		Intent intent = new Intent(MTBMessageDetailPage.this, MTBProfileSendPrivateEmailPage.class);
+		intent.putExtra("userID", mMemID);
+		startActivity(intent);
 	}
 	
 	public void text() {
