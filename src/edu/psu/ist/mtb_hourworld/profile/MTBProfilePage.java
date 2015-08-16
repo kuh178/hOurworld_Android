@@ -558,10 +558,12 @@ public class MTBProfilePage extends Activity {
 								JSONObject jContactObj = jContactArr.getJSONObject(i);
 								
 								if(i == jContactArr.length() - 1) {
-									mContact += jContactObj.getString("contactType") + ": \t" + jContactObj.getString("contactInfo");
+									//mContact += jContactObj.getString("contactType") + ": \t" + jContactObj.getString("contactInfo");
+									mContact += jContactObj.getString("contactInfo");
 								}
 								else {
-									mContact += jContactObj.getString("contactType") + ": \t" + jContactObj.getString("contactInfo") + "\n";
+									//mContact += jContactObj.getString("contactType") + ": \t" + jContactObj.getString("contactInfo") + "\n";
+									mContact += jContactObj.getString("contactInfo") + "\n";
 								}
 							}
 						}
